@@ -43,8 +43,9 @@ PROJECT_TGZ="${OUT_DIR}/ogs-rank-analysis-runpod.tgz"
 cd "${REPO_ROOT}"
 
 echo "Packaging project to ${PROJECT_TGZ}"
-tar \
+COPYFILE_DISABLE=1 tar \
   --exclude='.DS_Store' \
+  --exclude='._*' \
   --exclude='__pycache__' \
   --exclude='.rank_mle_cache' \
   --exclude='*.pyc' \

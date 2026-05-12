@@ -61,7 +61,7 @@ if [[ ! -f "${PROJECT_TGZ}" ]]; then
 fi
 
 echo "Unpacking project"
-tar -xzf "${PROJECT_TGZ}" -C "${PROJECT_DIR}"
+tar --no-same-owner -xzf "${PROJECT_TGZ}" -C "${PROJECT_DIR}"
 
 download_if_missing "${MAIN_MODEL_URL}" "${MODELS_DIR}/${MAIN_MODEL_NAME}"
 download_if_missing "${HUMAN_MODEL_URL}" "${MODELS_DIR}/${HUMAN_MODEL_NAME}"
