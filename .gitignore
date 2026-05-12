@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Generated SGF exports. Regenerate from data/sample-100k.json.gz.
+data/sample-100k.json.gz
+data/sample-100k-sgfs/
+data/sample-100k-medium-ranked-19x19-human-sgfs/
+data/sample-100k-medium-ranked-19x19-human-150moves-sgfs/
+
+# Per-SGF rank MLE caches.
+.rank_mle_cache/
+**/.rank_mle_cache/
+
+# Local and incomplete analysis outputs.
+results/
+
+# Local packaging outputs.
+*.tgz
+*.tar.gz
+katago.zip
