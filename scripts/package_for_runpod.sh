@@ -44,6 +44,7 @@ cd "${REPO_ROOT}"
 
 echo "Packaging project to ${PROJECT_TGZ}"
 COPYFILE_DISABLE=1 tar \
+  --no-xattrs \
   --exclude='.DS_Store' \
   --exclude='._*' \
   --exclude='__pycache__' \

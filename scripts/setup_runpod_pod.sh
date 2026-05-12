@@ -71,7 +71,17 @@ echo "Unpacking KataGo ${KATAGO_VERSION}"
 unzip -o "${WORKSPACE}/${KATAGO_ZIP}" -d "${KATAGO_DIR}"
 
 KATAGO_BIN="${KATAGO_DIR}/katago"
-if [[ ! -x "${KATAGO_BIN}" ]]; then
+KATAGO_RUN="${KATAGO_DIR}/katago-run"
+if [[ -x "${KATAGO_BIN}" ]] && "${KATAGO_BIN}" --appimage-help >/dev/null 2>&1; then
+  echo "Extracting KataGo AppImage for container execution without FUSE"
+  (cd "${KATAGO_DIR}" && "${KATAGO_BIN}" --appimage-extract >/dev/null)
+  if [[ -x "${KATAGO_DIR}/squashfs-root/AppRun" ]]; then
+    KATAGO_BIN="${KATAGO_DIR}/squashfs-root/AppRun"
+  else
+    echo "KataGo AppImage extraction did not produce squashfs-root/AppRun" >&2
+    exit 1
+  fi
+elif [[ ! -x "${KATAGO_BIN}" ]]; then
   FOUND_BIN="$(find "${KATAGO_DIR}" -type f -name katago -perm -111 | head -n 1 || true)"
   if [[ -n "${FOUND_BIN}" ]]; then
     KATAGO_BIN="${FOUND_BIN}"
@@ -82,8 +92,20 @@ if [[ ! -x "${KATAGO_BIN}" ]]; then
 fi
 chmod +x "${KATAGO_BIN}"
 
-echo "KataGo binary: ${KATAGO_BIN}"
-"${KATAGO_BIN}" version || true
+CUDNN_LIB_DIR="$(find /usr/local /usr /opt -type f -name 'libcudnn.so*' 2>/dev/null | head -n 1 | xargs -r dirname || true)"
+if [[ -z "${CUDNN_LIB_DIR}" ]]; then
+  echo "WARNING: libcudnn.so was not found; KataGo CUDA may fail unless the template provides it on the linker path." >&2
+fi
+
+cat > "${KATAGO_RUN}" <<EOF_RUN
+#!/usr/bin/env bash
+export LD_LIBRARY_PATH="${CUDNN_LIB_DIR}:\${LD_LIBRARY_PATH:-}"
+exec "${KATAGO_BIN}" "\$@"
+EOF_RUN
+chmod +x "${KATAGO_RUN}"
+
+echo "KataGo binary: ${KATAGO_RUN}"
+"${KATAGO_RUN}" version || true
 
 MAIN_MODEL="${MODELS_DIR}/${MAIN_MODEL_NAME}"
 HUMAN_MODEL="${MODELS_DIR}/${HUMAN_MODEL_NAME}"
@@ -137,7 +159,7 @@ Fixed versions:
 Tiny test command:
   cd ${PROJECT_DIR}
   PYTHONPATH=tools python3 tools/analyze_rank_mle_dataset.py \\
-    --katago ${KATAGO_BIN} \\
+    --katago ${KATAGO_RUN} \\
     --model ${MAIN_MODEL} \\
     --human-model ${HUMAN_MODEL} \\
     --home-data-dir ${KATAGO_HOME} \\
@@ -150,7 +172,7 @@ Tiny test command:
 Full run command:
   cd ${PROJECT_DIR}
   PYTHONPATH=tools python3 tools/analyze_rank_mle_dataset.py \\
-    --katago ${KATAGO_BIN} \\
+    --katago ${KATAGO_RUN} \\
     --model ${MAIN_MODEL} \\
     --human-model ${HUMAN_MODEL} \\
     --home-data-dir ${KATAGO_HOME} \\
