@@ -131,6 +131,17 @@ def _row_for_sgf(path: Path, data: dict) -> dict[str, str]:
     }
 
 
+def _print_problem_sgf(path: Path, error: BaseException) -> None:
+    print(f"Error while analyzing SGF: {path}", file=sys.stderr)
+    print(f"Exception: {type(error).__name__}: {error}", file=sys.stderr)
+    print("----- begin problematic SGF -----", file=sys.stderr)
+    try:
+        print(path.read_text(encoding="utf-8", errors="replace").rstrip(), file=sys.stderr)
+    except OSError as read_error:
+        print(f"<could not read SGF: {read_error}>", file=sys.stderr)
+    print("----- end problematic SGF -----", file=sys.stderr)
+
+
 def _expand(path: str | Path) -> str:
     return os.path.abspath(os.path.expanduser(str(path)))
 
@@ -248,11 +259,15 @@ def main(argv=None) -> int:
                     break
                 gameid = _game_id(sgf_path)
                 print(f"[{index}/{len(pending)}] analyzing game {gameid}", file=sys.stderr)
-                data = analyze_path(
-                    client,
-                    str(sgf_path),
-                    use_cache=not args.no_cache,
-                )
+                try:
+                    data = analyze_path(
+                        client,
+                        str(sgf_path),
+                        use_cache=not args.no_cache,
+                    )
+                except Exception as error:
+                    _print_problem_sgf(sgf_path, error)
+                    raise
                 writer.writerow(_row_for_sgf(sgf_path, data))
                 handle.flush()
                 os.fsync(handle.fileno())

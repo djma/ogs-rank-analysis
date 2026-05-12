@@ -232,8 +232,13 @@ def render_svg(
             f'<text class="label" x="{left - 10}" y="{y + 4:.2f}" text-anchor="end">'
             f'{strength_to_rank(tick)}</text>'
         )
+        lines.append(
+            f'<text class="label" x="{width - right + 10}" y="{y + 4:.2f}" text-anchor="start">'
+            f'{strength_to_rank(tick)}</text>'
+        )
 
     lines.append(f'<line class="axis" x1="{left}" y1="{top}" x2="{left}" y2="{height - bottom}"/>')
+    lines.append(f'<line class="axis" x1="{width - right}" y1="{top}" x2="{width - right}" y2="{height - bottom}"/>')
     lines.append(f'<line class="axis" x1="{left}" y1="{height - bottom}" x2="{width - right}" y2="{height - bottom}"/>')
 
     for ogs_strength in range(min_x, max_x + 1):

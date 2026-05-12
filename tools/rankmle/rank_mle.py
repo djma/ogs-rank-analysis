@@ -155,7 +155,10 @@ def _analyze_game(
         done_event.wait(timeout=0.5)
 
     if error_count[0] == expected:
-        raise RuntimeError(f"KataGo rejected all {expected} queries: {first_error[0]!r}")
+        raise RuntimeError(
+            f"KataGo rejected all {expected} queries for {game.sgf_path}: "
+            f"{first_error[0]!r}"
+        )
 
     return {
         "version": CACHE_VERSION,
@@ -207,4 +210,3 @@ def predict_per_player(data: dict) -> dict:
             "mean_loglik": means[best],
         }
     return out
-

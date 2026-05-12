@@ -20,6 +20,37 @@ UPSTREAM_BOT_USERNAMES = {
     "GNU Go Level 1",
     "Kugutsu",
 }
+BLACKLISTED_GAME_IDS = {
+    427508,
+    428481,
+    429705,
+    455926,
+    459488,
+    474293,
+    526904,
+    552120,
+    657172,
+    40163786,
+    40179045,
+    40307714,
+    40460301,
+    40886435,
+    40907427,
+    41234623,
+    41477368,
+    42032919,
+    42036884,
+    42283009,
+    44168992,
+    44168998,
+    49397680,
+    49833763,
+    59445457,
+    64514119,
+    65190381,
+    70640302,
+    71822605,
+}
 BOT_USERNAME_MARKERS = (
     "bot",
     "fuego",
@@ -95,6 +126,14 @@ def is_medium_ranked_19x19_game(ogsdata):
     )
 
 
+def is_not_blacklisted_game(ogsdata):
+    try:
+        game_id = int(ogsdata.get("game_id"))
+    except (TypeError, ValueError):
+        return True
+    return game_id not in BLACKLISTED_GAME_IDS
+
+
 def is_bot_player(player):
     """Best-effort bot detection for OGS dump player objects.
 
@@ -125,7 +164,7 @@ def is_human_vs_human_game(ogsdata):
 
 
 def is_medium_ranked_19x19_human_game(ogsdata):
-    return is_medium_ranked_19x19_game(ogsdata) and is_human_vs_human_game(ogsdata)
+    return is_medium_ranked_19x19_game(ogsdata) and is_human_vs_human_game(ogsdata) and is_not_blacklisted_game(ogsdata)
 
 
 def has_at_least_moves(ogsdata, minimum):
@@ -406,6 +445,7 @@ def main():
         filters.append(is_medium_ranked_19x19_game)
     if args.human_vs_human:
         filters.append(is_human_vs_human_game)
+    filters.append(is_not_blacklisted_game)
     if args.min_moves is not None:
         filters.append(lambda obj: has_at_least_moves(obj, args.min_moves))
 
