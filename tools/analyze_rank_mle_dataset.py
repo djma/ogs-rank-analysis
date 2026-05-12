@@ -43,6 +43,7 @@ CSV_FIELDS = [
     "white_ogs_rank",
     "white_estimated_rank",
 ]
+ERROR_FIELDS = ["gameid", "sgf_path", "error_type", "error"]
 
 _STOP = False
 
@@ -63,6 +64,17 @@ def _completed_gameids(csv_path: Path) -> set[str]:
     if not csv_path.exists():
         return set()
     with csv_path.open(newline="") as handle:
+        return {
+            row["gameid"]
+            for row in csv.DictReader(handle)
+            if row.get("gameid")
+        }
+
+
+def _errored_gameids(error_path: Path) -> set[str]:
+    if not error_path.exists():
+        return set()
+    with error_path.open(newline="") as handle:
         return {
             row["gameid"]
             for row in csv.DictReader(handle)
@@ -142,6 +154,21 @@ def _print_problem_sgf(path: Path, error: BaseException) -> None:
     print("----- end problematic SGF -----", file=sys.stderr)
 
 
+def _write_error_row(
+    writer: csv.DictWriter,
+    path: Path,
+    error: BaseException,
+) -> None:
+    writer.writerow(
+        {
+            "gameid": _game_id(path),
+            "sgf_path": str(path),
+            "error_type": type(error).__name__,
+            "error": str(error),
+        }
+    )
+
+
 def _expand(path: str | Path) -> str:
     return os.path.abspath(os.path.expanduser(str(path)))
 
@@ -212,12 +239,15 @@ def main(argv=None) -> int:
         raise SystemExit(f"SGF directory not found: {sgf_dir}")
 
     output = args.output.resolve()
+    error_output = output.with_suffix(output.suffix + ".error")
     output.parent.mkdir(parents=True, exist_ok=True)
     all_sgfs = _iter_sgfs(sgf_dir)
     sgf_by_gameid = {_game_id(path): path for path in all_sgfs}
     _ensure_csv_schema(output, sgf_by_gameid)
     completed = _completed_gameids(output)
-    pending = [path for path in all_sgfs if _game_id(path) not in completed]
+    errored = _errored_gameids(error_output)
+    already_seen = completed | errored
+    pending = [path for path in all_sgfs if _game_id(path) not in already_seen]
     pending = _ordered_sgfs(
         pending,
         order=args.order,
@@ -227,6 +257,9 @@ def main(argv=None) -> int:
         pending = pending[: args.limit]
 
     write_header = not output.exists() or output.stat().st_size == 0
+    write_error_header = (
+        not error_output.exists() or error_output.stat().st_size == 0
+    )
     cfg = KataGoConfig(
         katago=_expand(args.katago),
         model=_expand(args.model),
@@ -237,7 +270,7 @@ def main(argv=None) -> int:
 
     print(
         f"Found {len(all_sgfs)} SGFs, {len(completed)} already in CSV, "
-        f"{len(pending)} pending.",
+        f"{len(errored)} already in error log, {len(pending)} pending.",
         file=sys.stderr,
     )
     if not pending:
@@ -247,12 +280,20 @@ def main(argv=None) -> int:
     client = KataGoClient(cfg)
     client.start()
     processed = 0
+    failed = 0
     try:
-        with output.open("a", newline="") as handle:
+        with (
+            output.open("a", newline="") as handle,
+            error_output.open("a", newline="") as error_handle,
+        ):
             writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS)
+            error_writer = csv.DictWriter(error_handle, fieldnames=ERROR_FIELDS)
             if write_header:
                 writer.writeheader()
                 handle.flush()
+            if write_error_header:
+                error_writer.writeheader()
+                error_handle.flush()
             for index, sgf_path in enumerate(pending, start=1):
                 if _STOP:
                     print("Stop requested; exiting after last completed row.", file=sys.stderr)
@@ -267,7 +308,11 @@ def main(argv=None) -> int:
                     )
                 except Exception as error:
                     _print_problem_sgf(sgf_path, error)
-                    raise
+                    _write_error_row(error_writer, sgf_path, error)
+                    error_handle.flush()
+                    os.fsync(error_handle.fileno())
+                    failed += 1
+                    continue
                 writer.writerow(_row_for_sgf(sgf_path, data))
                 handle.flush()
                 os.fsync(handle.fileno())
@@ -296,7 +341,10 @@ def main(argv=None) -> int:
     finally:
         client.shutdown()
 
-    print(f"Wrote {processed} rows to {output}", file=sys.stderr)
+    print(
+        f"Wrote {processed} rows to {output} and {failed} errors to {error_output}",
+        file=sys.stderr,
+    )
     return 0
 
 
