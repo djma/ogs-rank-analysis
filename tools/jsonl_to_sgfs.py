@@ -4,6 +4,7 @@ import datetime as dt
 import gzip
 import json
 import math
+import random
 import re
 import unicodedata
 from pathlib import Path
@@ -169,6 +170,13 @@ def is_medium_ranked_19x19_human_game(ogsdata):
 
 def has_at_least_moves(ogsdata, minimum):
     return len(ogsdata.get("moves") or []) >= minimum
+
+
+def starts_on_or_after(ogsdata, start_date):
+    start_time = ogsdata.get("start_time")
+    if start_time is None:
+        return False
+    return dt.datetime.utcfromtimestamp(start_time).date() >= start_date
 
 
 def construct_sgf(ogsdata):
@@ -392,18 +400,31 @@ def write_sgf(output_dir, is_export, black, white, game_date, game_id, sgf_conte
     return path
 
 
-def convert(input_path, output_dir, limit=None, record_filter=None):
+def convert(input_path, output_dir, limit=None, record_filter=None, sample_rate=None, sample_seed=0):
+    rng = random.Random(sample_seed)
     converted = 0
     filtered = 0
     failed = 0
+    sampled_out = 0
     failure_log = output_dir / "failures.jsonl"
     failure_log.parent.mkdir(parents=True, exist_ok=True)
+
+    def print_progress(line_no):
+        print(
+            f"processed={line_no} sampled_out={sampled_out} converted={converted} filtered={filtered} failed={failed}",
+            flush=True,
+        )
 
     with gzip.open(input_path, "rt", encoding="utf-8") as infile, failure_log.open("w", encoding="utf-8") as failures:
         for line_no, line in enumerate(infile, 1):
             if limit is not None and line_no > limit:
                 break
             if not line.strip():
+                continue
+            if sample_rate is not None and rng.random() >= sample_rate:
+                sampled_out += 1
+                if line_no % 10000 == 0:
+                    print_progress(line_no)
                 continue
             try:
                 obj = json.loads(line)
@@ -417,9 +438,16 @@ def convert(input_path, output_dir, limit=None, record_filter=None):
                 failed += 1
                 failures.write(json.dumps({"line": line_no, "error": str(exc), "record": line.rstrip()}, ensure_ascii=False) + "\n")
             if line_no % 10000 == 0:
-                print(f"processed={line_no} converted={converted} filtered={filtered} failed={failed}", flush=True)
+                print_progress(line_no)
 
-    print(f"done converted={converted} filtered={filtered} failed={failed} output={output_dir}")
+    print(f"done converted={converted} sampled_out={sampled_out} filtered={filtered} failed={failed} output={output_dir}")
+
+
+def parse_date(value):
+    try:
+        return dt.datetime.strptime(value, "%Y-%m-%d").date()
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(f"expected YYYY-MM-DD, got {value!r}") from exc
 
 
 def main():
@@ -438,7 +466,13 @@ def main():
         help="Only convert games where both players pass best-effort human player detection.",
     )
     parser.add_argument("--min-moves", type=int, help="Only convert games with at least this many moves.")
+    parser.add_argument("--start-date", type=parse_date, help="Only convert games with UTC start_time date on or after YYYY-MM-DD. e.g. 2021-09-23")
+    parser.add_argument("--sample-rate", type=float, help="Randomly keep this fraction of input records before filters.")
+    parser.add_argument("--sample-seed", type=int, default=0, help="Seed for reproducible --sample-rate sampling.")
     args = parser.parse_args()
+
+    if args.sample_rate is not None and not 0 < args.sample_rate <= 1:
+        parser.error("--sample-rate must be in (0, 1]")
 
     filters = []
     if args.medium_ranked_19x19:
@@ -448,11 +482,20 @@ def main():
     filters.append(is_not_blacklisted_game)
     if args.min_moves is not None:
         filters.append(lambda obj: has_at_least_moves(obj, args.min_moves))
+    if args.start_date is not None:
+        filters.append(lambda obj: starts_on_or_after(obj, args.start_date))
 
     record_filter = None
     if filters:
         record_filter = lambda obj: all(filter_func(obj) for filter_func in filters)
-    convert(args.input, args.output, args.limit, record_filter=record_filter)
+    convert(
+        args.input,
+        args.output,
+        args.limit,
+        record_filter=record_filter,
+        sample_rate=args.sample_rate,
+        sample_seed=args.sample_seed,
+    )
 
 
 if __name__ == "__main__":
