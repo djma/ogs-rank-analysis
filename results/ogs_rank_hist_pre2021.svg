@@ -1,0 +1,746 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1764" height="760" viewBox="0 0 1764 760">
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #1f2933; }
+.axis { stroke: #52606d; stroke-width: 1; }
+.grid { stroke: #d9e2ec; stroke-width: 1; }
+.bar { fill: #2f80a0; fill-opacity: 0.72; }
+.bar-zero { stroke: #d9e2ec; stroke-width: 0.8; }
+.identity { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 2 6; stroke-linecap: round; opacity: 0.42; }
+.median { fill: none; stroke: #f97316; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.median-point { fill: #f97316; stroke: #ffffff; stroke-width: 1.5; }
+.count { fill: #627d98; font-size: 10px; }
+.label { font-size: 12px; }
+.title { font-size: 22px; font-weight: 700; }
+.subtitle { fill: #627d98; font-size: 13px; }
+</style>
+<rect width="1764" height="760" fill="#f8fafc"/>
+<text class="title" x="86" y="28">Estimated KGS rank by OGS rank bucket</text>
+<text class="subtitle" x="86" y="47">Bars are normalized within each OGS rank; orange marks the median. Sample: 2013-10-26 to 2021-01-28.</text>
+<line class="grid" x1="86" y1="644.31" x2="1732" y2="644.31"/>
+<text class="label" x="76" y="648.31" text-anchor="end">≤20k</text>
+<text class="label" x="1742" y="648.31" text-anchor="start">≤20k</text>
+<line class="grid" x1="86" y1="597.54" x2="1732" y2="597.54"/>
+<text class="label" x="76" y="601.54" text-anchor="end">18k</text>
+<text class="label" x="1742" y="601.54" text-anchor="start">18k</text>
+<line class="grid" x1="86" y1="550.77" x2="1732" y2="550.77"/>
+<text class="label" x="76" y="554.77" text-anchor="end">16k</text>
+<text class="label" x="1742" y="554.77" text-anchor="start">16k</text>
+<line class="grid" x1="86" y1="504.00" x2="1732" y2="504.00"/>
+<text class="label" x="76" y="508.00" text-anchor="end">14k</text>
+<text class="label" x="1742" y="508.00" text-anchor="start">14k</text>
+<line class="grid" x1="86" y1="457.23" x2="1732" y2="457.23"/>
+<text class="label" x="76" y="461.23" text-anchor="end">12k</text>
+<text class="label" x="1742" y="461.23" text-anchor="start">12k</text>
+<line class="grid" x1="86" y1="410.46" x2="1732" y2="410.46"/>
+<text class="label" x="76" y="414.46" text-anchor="end">10k</text>
+<text class="label" x="1742" y="414.46" text-anchor="start">10k</text>
+<line class="grid" x1="86" y1="363.69" x2="1732" y2="363.69"/>
+<text class="label" x="76" y="367.69" text-anchor="end">8k</text>
+<text class="label" x="1742" y="367.69" text-anchor="start">8k</text>
+<line class="grid" x1="86" y1="316.92" x2="1732" y2="316.92"/>
+<text class="label" x="76" y="320.92" text-anchor="end">6k</text>
+<text class="label" x="1742" y="320.92" text-anchor="start">6k</text>
+<line class="grid" x1="86" y1="270.15" x2="1732" y2="270.15"/>
+<text class="label" x="76" y="274.15" text-anchor="end">4k</text>
+<text class="label" x="1742" y="274.15" text-anchor="start">4k</text>
+<line class="grid" x1="86" y1="223.38" x2="1732" y2="223.38"/>
+<text class="label" x="76" y="227.38" text-anchor="end">2k</text>
+<text class="label" x="1742" y="227.38" text-anchor="start">2k</text>
+<line class="grid" x1="86" y1="176.62" x2="1732" y2="176.62"/>
+<text class="label" x="76" y="180.62" text-anchor="end">1d</text>
+<text class="label" x="1742" y="180.62" text-anchor="start">1d</text>
+<line class="grid" x1="86" y1="129.85" x2="1732" y2="129.85"/>
+<text class="label" x="76" y="133.85" text-anchor="end">3d</text>
+<text class="label" x="1742" y="133.85" text-anchor="start">3d</text>
+<line class="grid" x1="86" y1="83.08" x2="1732" y2="83.08"/>
+<text class="label" x="76" y="87.08" text-anchor="end">5d</text>
+<text class="label" x="1742" y="87.08" text-anchor="start">5d</text>
+<line class="grid" x1="86" y1="59.69" x2="1732" y2="59.69"/>
+<text class="label" x="76" y="63.69" text-anchor="end">≥6d</text>
+<text class="label" x="1742" y="63.69" text-anchor="start">≥6d</text>
+<line class="axis" x1="86" y1="48" x2="86" y2="656"/>
+<line class="axis" x1="1732" y1="48" x2="1732" y2="656"/>
+<line class="axis" x1="86" y1="656" x2="1732" y2="656"/>
+<line class="bar-zero" x1="107.66" y1="48.00" x2="107.66" y2="656.00"/>
+<rect class="bar" x="89.47" y="636.36" width="36.39" height="15.90" rx="1.5"><title>30k: 69 estimated as ≤20k</title></rect>
+<rect class="bar" x="105.02" y="612.97" width="5.27" height="15.90" rx="1.5"><title>30k: 10 estimated as 19k</title></rect>
+<rect class="bar" x="102.65" y="589.59" width="10.02" height="15.90" rx="1.5"><title>30k: 19 estimated as 18k</title></rect>
+<rect class="bar" x="107.13" y="566.20" width="1.05" height="15.90" rx="1.5"><title>30k: 2 estimated as 17k</title></rect>
+<rect class="bar" x="107.13" y="542.82" width="1.05" height="15.90" rx="1.5"><title>30k: 2 estimated as 16k</title></rect>
+<rect class="bar" x="106.87" y="519.43" width="1.58" height="15.90" rx="1.5"><title>30k: 3 estimated as 15k</title></rect>
+<rect class="bar" x="107.39" y="496.05" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="107.13" y="472.66" width="1.05" height="15.90" rx="1.5"><title>30k: 2 estimated as 13k</title></rect>
+<rect class="bar" x="107.13" y="449.28" width="1.05" height="15.90" rx="1.5"><title>30k: 2 estimated as 12k</title></rect>
+<rect class="bar" x="107.39" y="425.90" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 11k</title></rect>
+<rect class="bar" x="107.39" y="402.51" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 10k</title></rect>
+<rect class="bar" x="107.39" y="355.74" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="107.39" y="308.97" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 6k</title></rect>
+<rect class="bar" x="107.13" y="285.59" width="1.05" height="15.90" rx="1.5"><title>30k: 2 estimated as 5k</title></rect>
+<rect class="bar" x="106.87" y="262.20" width="1.58" height="15.90" rx="1.5"><title>30k: 3 estimated as 4k</title></rect>
+<rect class="bar" x="107.39" y="238.82" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 3k</title></rect>
+<rect class="bar" x="107.39" y="215.43" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 2k</title></rect>
+<rect class="bar" x="107.39" y="192.05" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 1k</title></rect>
+<rect class="bar" x="107.39" y="168.66" width="0.53" height="15.90" rx="1.5"><title>30k: 1 estimated as 1d</title></rect>
+<line class="bar-zero" x1="150.97" y1="48.00" x2="150.97" y2="656.00"/>
+<rect class="bar" x="132.78" y="636.36" width="36.39" height="15.90" rx="1.5"><title>29k: 8 estimated as ≤20k</title></rect>
+<rect class="bar" x="141.88" y="612.97" width="18.19" height="15.90" rx="1.5"><title>29k: 4 estimated as 19k</title></rect>
+<rect class="bar" x="141.88" y="566.20" width="18.19" height="15.90" rx="1.5"><title>29k: 4 estimated as 17k</title></rect>
+<rect class="bar" x="146.43" y="519.43" width="9.10" height="15.90" rx="1.5"><title>29k: 2 estimated as 15k</title></rect>
+<rect class="bar" x="148.70" y="496.05" width="4.55" height="15.90" rx="1.5"><title>29k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="148.70" y="472.66" width="4.55" height="15.90" rx="1.5"><title>29k: 1 estimated as 13k</title></rect>
+<rect class="bar" x="148.70" y="449.28" width="4.55" height="15.90" rx="1.5"><title>29k: 1 estimated as 12k</title></rect>
+<rect class="bar" x="148.70" y="425.90" width="4.55" height="15.90" rx="1.5"><title>29k: 1 estimated as 11k</title></rect>
+<rect class="bar" x="148.70" y="332.36" width="4.55" height="15.90" rx="1.5"><title>29k: 1 estimated as 7k</title></rect>
+<line class="bar-zero" x1="194.29" y1="48.00" x2="194.29" y2="656.00"/>
+<rect class="bar" x="176.10" y="636.36" width="36.39" height="15.90" rx="1.5"><title>28k: 8 estimated as ≤20k</title></rect>
+<rect class="bar" x="192.02" y="612.97" width="4.55" height="15.90" rx="1.5"><title>28k: 1 estimated as 19k</title></rect>
+<rect class="bar" x="192.02" y="472.66" width="4.55" height="15.90" rx="1.5"><title>28k: 1 estimated as 13k</title></rect>
+<rect class="bar" x="192.02" y="379.13" width="4.55" height="15.90" rx="1.5"><title>28k: 1 estimated as 9k</title></rect>
+<rect class="bar" x="192.02" y="332.36" width="4.55" height="15.90" rx="1.5"><title>28k: 1 estimated as 7k</title></rect>
+<rect class="bar" x="192.02" y="262.20" width="4.55" height="15.90" rx="1.5"><title>28k: 1 estimated as 4k</title></rect>
+<line class="bar-zero" x1="237.61" y1="48.00" x2="237.61" y2="656.00"/>
+<rect class="bar" x="219.41" y="636.36" width="36.39" height="15.90" rx="1.5"><title>27k: 6 estimated as ≤20k</title></rect>
+<rect class="bar" x="234.57" y="566.20" width="6.06" height="15.90" rx="1.5"><title>27k: 1 estimated as 17k</title></rect>
+<rect class="bar" x="231.54" y="519.43" width="12.13" height="15.90" rx="1.5"><title>27k: 2 estimated as 15k</title></rect>
+<rect class="bar" x="234.57" y="449.28" width="6.06" height="15.90" rx="1.5"><title>27k: 1 estimated as 12k</title></rect>
+<rect class="bar" x="234.57" y="425.90" width="6.06" height="15.90" rx="1.5"><title>27k: 1 estimated as 11k</title></rect>
+<rect class="bar" x="231.54" y="262.20" width="12.13" height="15.90" rx="1.5"><title>27k: 2 estimated as 4k</title></rect>
+<rect class="bar" x="234.57" y="145.28" width="6.06" height="15.90" rx="1.5"><title>27k: 1 estimated as 2d</title></rect>
+<line class="bar-zero" x1="280.92" y1="48.00" x2="280.92" y2="656.00"/>
+<rect class="bar" x="262.73" y="636.36" width="36.39" height="15.90" rx="1.5"><title>26k: 8 estimated as ≤20k</title></rect>
+<rect class="bar" x="278.65" y="612.97" width="4.55" height="15.90" rx="1.5"><title>26k: 1 estimated as 19k</title></rect>
+<rect class="bar" x="278.65" y="589.59" width="4.55" height="15.90" rx="1.5"><title>26k: 1 estimated as 18k</title></rect>
+<rect class="bar" x="278.65" y="566.20" width="4.55" height="15.90" rx="1.5"><title>26k: 1 estimated as 17k</title></rect>
+<rect class="bar" x="278.65" y="542.82" width="4.55" height="15.90" rx="1.5"><title>26k: 1 estimated as 16k</title></rect>
+<rect class="bar" x="278.65" y="519.43" width="4.55" height="15.90" rx="1.5"><title>26k: 1 estimated as 15k</title></rect>
+<rect class="bar" x="278.65" y="496.05" width="4.55" height="15.90" rx="1.5"><title>26k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="269.55" y="472.66" width="22.74" height="15.90" rx="1.5"><title>26k: 5 estimated as 13k</title></rect>
+<rect class="bar" x="278.65" y="449.28" width="4.55" height="15.90" rx="1.5"><title>26k: 1 estimated as 12k</title></rect>
+<line class="bar-zero" x1="324.24" y1="48.00" x2="324.24" y2="656.00"/>
+<rect class="bar" x="306.04" y="636.36" width="36.39" height="15.90" rx="1.5"><title>25k: 25 estimated as ≤20k</title></rect>
+<rect class="bar" x="323.51" y="612.97" width="1.46" height="15.90" rx="1.5"><title>25k: 1 estimated as 19k</title></rect>
+<rect class="bar" x="319.87" y="589.59" width="8.73" height="15.90" rx="1.5"><title>25k: 6 estimated as 18k</title></rect>
+<rect class="bar" x="322.78" y="566.20" width="2.91" height="15.90" rx="1.5"><title>25k: 2 estimated as 17k</title></rect>
+<rect class="bar" x="322.78" y="542.82" width="2.91" height="15.90" rx="1.5"><title>25k: 2 estimated as 16k</title></rect>
+<rect class="bar" x="323.51" y="425.90" width="1.46" height="15.90" rx="1.5"><title>25k: 1 estimated as 11k</title></rect>
+<rect class="bar" x="323.51" y="379.13" width="1.46" height="15.90" rx="1.5"><title>25k: 1 estimated as 9k</title></rect>
+<rect class="bar" x="323.51" y="355.74" width="1.46" height="15.90" rx="1.5"><title>25k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="323.51" y="332.36" width="1.46" height="15.90" rx="1.5"><title>25k: 1 estimated as 7k</title></rect>
+<rect class="bar" x="323.51" y="121.90" width="1.46" height="15.90" rx="1.5"><title>25k: 1 estimated as 3d</title></rect>
+<line class="bar-zero" x1="367.55" y1="48.00" x2="367.55" y2="656.00"/>
+<rect class="bar" x="349.36" y="636.36" width="36.39" height="15.90" rx="1.5"><title>24k: 21 estimated as ≤20k</title></rect>
+<rect class="bar" x="364.09" y="612.97" width="6.93" height="15.90" rx="1.5"><title>24k: 4 estimated as 19k</title></rect>
+<rect class="bar" x="364.95" y="589.59" width="5.20" height="15.90" rx="1.5"><title>24k: 3 estimated as 18k</title></rect>
+<rect class="bar" x="366.69" y="519.43" width="1.73" height="15.90" rx="1.5"><title>24k: 1 estimated as 15k</title></rect>
+<rect class="bar" x="364.09" y="472.66" width="6.93" height="15.90" rx="1.5"><title>24k: 4 estimated as 13k</title></rect>
+<rect class="bar" x="366.69" y="425.90" width="1.73" height="15.90" rx="1.5"><title>24k: 1 estimated as 11k</title></rect>
+<rect class="bar" x="365.82" y="402.51" width="3.47" height="15.90" rx="1.5"><title>24k: 2 estimated as 10k</title></rect>
+<rect class="bar" x="365.82" y="332.36" width="3.47" height="15.90" rx="1.5"><title>24k: 2 estimated as 7k</title></rect>
+<rect class="bar" x="366.69" y="285.59" width="1.73" height="15.90" rx="1.5"><title>24k: 1 estimated as 5k</title></rect>
+<line class="bar-zero" x1="410.87" y1="48.00" x2="410.87" y2="656.00"/>
+<rect class="bar" x="392.68" y="636.36" width="36.39" height="15.90" rx="1.5"><title>23k: 35 estimated as ≤20k</title></rect>
+<rect class="bar" x="407.75" y="612.97" width="6.24" height="15.90" rx="1.5"><title>23k: 6 estimated as 19k</title></rect>
+<rect class="bar" x="409.83" y="589.59" width="2.08" height="15.90" rx="1.5"><title>23k: 2 estimated as 18k</title></rect>
+<rect class="bar" x="410.35" y="566.20" width="1.04" height="15.90" rx="1.5"><title>23k: 1 estimated as 17k</title></rect>
+<rect class="bar" x="409.83" y="519.43" width="2.08" height="15.90" rx="1.5"><title>23k: 2 estimated as 15k</title></rect>
+<rect class="bar" x="410.35" y="496.05" width="1.04" height="15.90" rx="1.5"><title>23k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="408.79" y="472.66" width="4.16" height="15.90" rx="1.5"><title>23k: 4 estimated as 13k</title></rect>
+<rect class="bar" x="410.35" y="402.51" width="1.04" height="15.90" rx="1.5"><title>23k: 1 estimated as 10k</title></rect>
+<rect class="bar" x="409.83" y="355.74" width="2.08" height="15.90" rx="1.5"><title>23k: 2 estimated as 8k</title></rect>
+<rect class="bar" x="410.35" y="332.36" width="1.04" height="15.90" rx="1.5"><title>23k: 1 estimated as 7k</title></rect>
+<rect class="bar" x="410.35" y="285.59" width="1.04" height="15.90" rx="1.5"><title>23k: 1 estimated as 5k</title></rect>
+<rect class="bar" x="410.35" y="215.43" width="1.04" height="15.90" rx="1.5"><title>23k: 1 estimated as 2k</title></rect>
+<line class="bar-zero" x1="454.18" y1="48.00" x2="454.18" y2="656.00"/>
+<rect class="bar" x="435.99" y="636.36" width="36.39" height="15.90" rx="1.5"><title>22k: 36 estimated as ≤20k</title></rect>
+<rect class="bar" x="449.13" y="612.97" width="10.11" height="15.90" rx="1.5"><title>22k: 10 estimated as 19k</title></rect>
+<rect class="bar" x="451.66" y="589.59" width="5.05" height="15.90" rx="1.5"><title>22k: 5 estimated as 18k</title></rect>
+<rect class="bar" x="452.16" y="566.20" width="4.04" height="15.90" rx="1.5"><title>22k: 4 estimated as 17k</title></rect>
+<rect class="bar" x="453.68" y="542.82" width="1.01" height="15.90" rx="1.5"><title>22k: 1 estimated as 16k</title></rect>
+<rect class="bar" x="453.68" y="519.43" width="1.01" height="15.90" rx="1.5"><title>22k: 1 estimated as 15k</title></rect>
+<rect class="bar" x="453.68" y="472.66" width="1.01" height="15.90" rx="1.5"><title>22k: 1 estimated as 13k</title></rect>
+<rect class="bar" x="453.68" y="379.13" width="1.01" height="15.90" rx="1.5"><title>22k: 1 estimated as 9k</title></rect>
+<rect class="bar" x="453.68" y="355.74" width="1.01" height="15.90" rx="1.5"><title>22k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="453.68" y="192.05" width="1.01" height="15.90" rx="1.5"><title>22k: 1 estimated as 1k</title></rect>
+<rect class="bar" x="453.68" y="168.66" width="1.01" height="15.90" rx="1.5"><title>22k: 1 estimated as 1d</title></rect>
+<line class="bar-zero" x1="497.50" y1="48.00" x2="497.50" y2="656.00"/>
+<rect class="bar" x="479.31" y="636.36" width="36.39" height="15.90" rx="1.5"><title>21k: 50 estimated as ≤20k</title></rect>
+<rect class="bar" x="493.13" y="612.97" width="8.73" height="15.90" rx="1.5"><title>21k: 12 estimated as 19k</title></rect>
+<rect class="bar" x="495.68" y="589.59" width="3.64" height="15.90" rx="1.5"><title>21k: 5 estimated as 18k</title></rect>
+<rect class="bar" x="495.68" y="566.20" width="3.64" height="15.90" rx="1.5"><title>21k: 5 estimated as 17k</title></rect>
+<rect class="bar" x="497.14" y="542.82" width="0.73" height="15.90" rx="1.5"><title>21k: 1 estimated as 16k</title></rect>
+<rect class="bar" x="496.41" y="519.43" width="2.18" height="15.90" rx="1.5"><title>21k: 3 estimated as 15k</title></rect>
+<rect class="bar" x="495.68" y="472.66" width="3.64" height="15.90" rx="1.5"><title>21k: 5 estimated as 13k</title></rect>
+<rect class="bar" x="497.14" y="402.51" width="0.73" height="15.90" rx="1.5"><title>21k: 1 estimated as 10k</title></rect>
+<rect class="bar" x="497.14" y="379.13" width="0.73" height="15.90" rx="1.5"><title>21k: 1 estimated as 9k</title></rect>
+<rect class="bar" x="497.14" y="355.74" width="0.73" height="15.90" rx="1.5"><title>21k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="496.77" y="332.36" width="1.46" height="15.90" rx="1.5"><title>21k: 2 estimated as 7k</title></rect>
+<rect class="bar" x="496.77" y="308.97" width="1.46" height="15.90" rx="1.5"><title>21k: 2 estimated as 6k</title></rect>
+<rect class="bar" x="497.14" y="285.59" width="0.73" height="15.90" rx="1.5"><title>21k: 1 estimated as 5k</title></rect>
+<rect class="bar" x="497.14" y="121.90" width="0.73" height="15.90" rx="1.5"><title>21k: 1 estimated as 3d</title></rect>
+<line class="bar-zero" x1="540.82" y1="48.00" x2="540.82" y2="656.00"/>
+<rect class="bar" x="522.62" y="636.36" width="36.39" height="15.90" rx="1.5"><title>20k: 43 estimated as ≤20k</title></rect>
+<rect class="bar" x="531.93" y="612.97" width="17.77" height="15.90" rx="1.5"><title>20k: 21 estimated as 19k</title></rect>
+<rect class="bar" x="537.43" y="589.59" width="6.77" height="15.90" rx="1.5"><title>20k: 8 estimated as 18k</title></rect>
+<rect class="bar" x="534.47" y="566.20" width="12.69" height="15.90" rx="1.5"><title>20k: 15 estimated as 17k</title></rect>
+<rect class="bar" x="540.39" y="542.82" width="0.85" height="15.90" rx="1.5"><title>20k: 1 estimated as 16k</title></rect>
+<rect class="bar" x="537.85" y="519.43" width="5.92" height="15.90" rx="1.5"><title>20k: 7 estimated as 15k</title></rect>
+<rect class="bar" x="537.43" y="496.05" width="6.77" height="15.90" rx="1.5"><title>20k: 8 estimated as 14k</title></rect>
+<rect class="bar" x="539.55" y="472.66" width="2.54" height="15.90" rx="1.5"><title>20k: 3 estimated as 13k</title></rect>
+<rect class="bar" x="539.55" y="449.28" width="2.54" height="15.90" rx="1.5"><title>20k: 3 estimated as 12k</title></rect>
+<rect class="bar" x="539.12" y="425.90" width="3.38" height="15.90" rx="1.5"><title>20k: 4 estimated as 11k</title></rect>
+<rect class="bar" x="540.39" y="355.74" width="0.85" height="15.90" rx="1.5"><title>20k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="538.70" y="332.36" width="4.23" height="15.90" rx="1.5"><title>20k: 5 estimated as 7k</title></rect>
+<rect class="bar" x="540.39" y="285.59" width="0.85" height="15.90" rx="1.5"><title>20k: 1 estimated as 5k</title></rect>
+<rect class="bar" x="540.39" y="262.20" width="0.85" height="15.90" rx="1.5"><title>20k: 1 estimated as 4k</title></rect>
+<rect class="bar" x="540.39" y="238.82" width="0.85" height="15.90" rx="1.5"><title>20k: 1 estimated as 3k</title></rect>
+<rect class="bar" x="539.97" y="215.43" width="1.69" height="15.90" rx="1.5"><title>20k: 2 estimated as 2k</title></rect>
+<rect class="bar" x="539.97" y="192.05" width="1.69" height="15.90" rx="1.5"><title>20k: 2 estimated as 1k</title></rect>
+<rect class="bar" x="540.39" y="51.74" width="0.85" height="15.90" rx="1.5"><title>20k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="584.13" y1="48.00" x2="584.13" y2="656.00"/>
+<rect class="bar" x="565.94" y="636.36" width="36.39" height="15.90" rx="1.5"><title>19k: 43 estimated as ≤20k</title></rect>
+<rect class="bar" x="570.59" y="612.97" width="27.08" height="15.90" rx="1.5"><title>19k: 32 estimated as 19k</title></rect>
+<rect class="bar" x="579.48" y="589.59" width="9.31" height="15.90" rx="1.5"><title>19k: 11 estimated as 18k</title></rect>
+<rect class="bar" x="576.09" y="566.20" width="16.08" height="15.90" rx="1.5"><title>19k: 19 estimated as 17k</title></rect>
+<rect class="bar" x="580.32" y="542.82" width="7.62" height="15.90" rx="1.5"><title>19k: 9 estimated as 16k</title></rect>
+<rect class="bar" x="575.67" y="519.43" width="16.92" height="15.90" rx="1.5"><title>19k: 20 estimated as 15k</title></rect>
+<rect class="bar" x="579.90" y="496.05" width="8.46" height="15.90" rx="1.5"><title>19k: 10 estimated as 14k</title></rect>
+<rect class="bar" x="574.40" y="472.66" width="19.46" height="15.90" rx="1.5"><title>19k: 23 estimated as 13k</title></rect>
+<rect class="bar" x="580.75" y="449.28" width="6.77" height="15.90" rx="1.5"><title>19k: 8 estimated as 12k</title></rect>
+<rect class="bar" x="582.86" y="425.90" width="2.54" height="15.90" rx="1.5"><title>19k: 3 estimated as 11k</title></rect>
+<rect class="bar" x="582.02" y="402.51" width="4.23" height="15.90" rx="1.5"><title>19k: 5 estimated as 10k</title></rect>
+<rect class="bar" x="582.44" y="355.74" width="3.38" height="15.90" rx="1.5"><title>19k: 4 estimated as 8k</title></rect>
+<rect class="bar" x="583.71" y="332.36" width="0.85" height="15.90" rx="1.5"><title>19k: 1 estimated as 7k</title></rect>
+<rect class="bar" x="583.29" y="285.59" width="1.69" height="15.90" rx="1.5"><title>19k: 2 estimated as 5k</title></rect>
+<rect class="bar" x="582.86" y="262.20" width="2.54" height="15.90" rx="1.5"><title>19k: 3 estimated as 4k</title></rect>
+<rect class="bar" x="583.71" y="215.43" width="0.85" height="15.90" rx="1.5"><title>19k: 1 estimated as 2k</title></rect>
+<rect class="bar" x="583.71" y="192.05" width="0.85" height="15.90" rx="1.5"><title>19k: 1 estimated as 1k</title></rect>
+<line class="bar-zero" x1="627.45" y1="48.00" x2="627.45" y2="656.00"/>
+<rect class="bar" x="609.25" y="636.36" width="36.39" height="15.90" rx="1.5"><title>18k: 37 estimated as ≤20k</title></rect>
+<rect class="bar" x="613.19" y="612.97" width="28.52" height="15.90" rx="1.5"><title>18k: 29 estimated as 19k</title></rect>
+<rect class="bar" x="623.51" y="589.59" width="7.87" height="15.90" rx="1.5"><title>18k: 8 estimated as 18k</title></rect>
+<rect class="bar" x="613.68" y="566.20" width="27.53" height="15.90" rx="1.5"><title>18k: 28 estimated as 17k</title></rect>
+<rect class="bar" x="620.56" y="542.82" width="13.77" height="15.90" rx="1.5"><title>18k: 14 estimated as 16k</title></rect>
+<rect class="bar" x="612.70" y="519.43" width="29.50" height="15.90" rx="1.5"><title>18k: 30 estimated as 15k</title></rect>
+<rect class="bar" x="617.61" y="496.05" width="19.67" height="15.90" rx="1.5"><title>18k: 20 estimated as 14k</title></rect>
+<rect class="bar" x="613.19" y="472.66" width="28.52" height="15.90" rx="1.5"><title>18k: 29 estimated as 13k</title></rect>
+<rect class="bar" x="616.63" y="449.28" width="21.63" height="15.90" rx="1.5"><title>18k: 22 estimated as 12k</title></rect>
+<rect class="bar" x="624.99" y="425.90" width="4.92" height="15.90" rx="1.5"><title>18k: 5 estimated as 11k</title></rect>
+<rect class="bar" x="624.01" y="402.51" width="6.88" height="15.90" rx="1.5"><title>18k: 7 estimated as 10k</title></rect>
+<rect class="bar" x="626.46" y="379.13" width="1.97" height="15.90" rx="1.5"><title>18k: 2 estimated as 9k</title></rect>
+<rect class="bar" x="626.96" y="355.74" width="0.98" height="15.90" rx="1.5"><title>18k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="624.99" y="332.36" width="4.92" height="15.90" rx="1.5"><title>18k: 5 estimated as 7k</title></rect>
+<rect class="bar" x="626.46" y="308.97" width="1.97" height="15.90" rx="1.5"><title>18k: 2 estimated as 6k</title></rect>
+<rect class="bar" x="626.46" y="285.59" width="1.97" height="15.90" rx="1.5"><title>18k: 2 estimated as 5k</title></rect>
+<rect class="bar" x="626.46" y="262.20" width="1.97" height="15.90" rx="1.5"><title>18k: 2 estimated as 4k</title></rect>
+<rect class="bar" x="626.96" y="215.43" width="0.98" height="15.90" rx="1.5"><title>18k: 1 estimated as 2k</title></rect>
+<rect class="bar" x="626.96" y="168.66" width="0.98" height="15.90" rx="1.5"><title>18k: 1 estimated as 1d</title></rect>
+<rect class="bar" x="626.96" y="121.90" width="0.98" height="15.90" rx="1.5"><title>18k: 1 estimated as 3d</title></rect>
+<rect class="bar" x="626.96" y="75.13" width="0.98" height="15.90" rx="1.5"><title>18k: 1 estimated as 5d</title></rect>
+<line class="bar-zero" x1="670.76" y1="48.00" x2="670.76" y2="656.00"/>
+<rect class="bar" x="659.19" y="636.36" width="23.15" height="15.90" rx="1.5"><title>17k: 28 estimated as ≤20k</title></rect>
+<rect class="bar" x="664.15" y="612.97" width="13.23" height="15.90" rx="1.5"><title>17k: 16 estimated as 19k</title></rect>
+<rect class="bar" x="661.67" y="589.59" width="18.19" height="15.90" rx="1.5"><title>17k: 22 estimated as 18k</title></rect>
+<rect class="bar" x="656.29" y="566.20" width="28.94" height="15.90" rx="1.5"><title>17k: 35 estimated as 17k</title></rect>
+<rect class="bar" x="665.80" y="542.82" width="9.92" height="15.90" rx="1.5"><title>17k: 12 estimated as 16k</title></rect>
+<rect class="bar" x="655.88" y="519.43" width="29.77" height="15.90" rx="1.5"><title>17k: 36 estimated as 15k</title></rect>
+<rect class="bar" x="656.71" y="496.05" width="28.12" height="15.90" rx="1.5"><title>17k: 34 estimated as 14k</title></rect>
+<rect class="bar" x="652.57" y="472.66" width="36.39" height="15.90" rx="1.5"><title>17k: 44 estimated as 13k</title></rect>
+<rect class="bar" x="658.77" y="449.28" width="23.98" height="15.90" rx="1.5"><title>17k: 29 estimated as 12k</title></rect>
+<rect class="bar" x="663.73" y="425.90" width="14.06" height="15.90" rx="1.5"><title>17k: 17 estimated as 11k</title></rect>
+<rect class="bar" x="662.08" y="402.51" width="17.37" height="15.90" rx="1.5"><title>17k: 21 estimated as 10k</title></rect>
+<rect class="bar" x="666.22" y="379.13" width="9.10" height="15.90" rx="1.5"><title>17k: 11 estimated as 9k</title></rect>
+<rect class="bar" x="668.70" y="355.74" width="4.13" height="15.90" rx="1.5"><title>17k: 5 estimated as 8k</title></rect>
+<rect class="bar" x="668.70" y="332.36" width="4.13" height="15.90" rx="1.5"><title>17k: 5 estimated as 7k</title></rect>
+<rect class="bar" x="670.35" y="308.97" width="0.83" height="15.90" rx="1.5"><title>17k: 1 estimated as 6k</title></rect>
+<rect class="bar" x="669.11" y="285.59" width="3.31" height="15.90" rx="1.5"><title>17k: 4 estimated as 5k</title></rect>
+<rect class="bar" x="670.35" y="262.20" width="0.83" height="15.90" rx="1.5"><title>17k: 1 estimated as 4k</title></rect>
+<rect class="bar" x="669.52" y="238.82" width="2.48" height="15.90" rx="1.5"><title>17k: 3 estimated as 3k</title></rect>
+<rect class="bar" x="670.35" y="215.43" width="0.83" height="15.90" rx="1.5"><title>17k: 1 estimated as 2k</title></rect>
+<rect class="bar" x="670.35" y="192.05" width="0.83" height="15.90" rx="1.5"><title>17k: 1 estimated as 1k</title></rect>
+<rect class="bar" x="670.35" y="145.28" width="0.83" height="15.90" rx="1.5"><title>17k: 1 estimated as 2d</title></rect>
+<rect class="bar" x="669.94" y="121.90" width="1.65" height="15.90" rx="1.5"><title>17k: 2 estimated as 3d</title></rect>
+<rect class="bar" x="670.35" y="98.51" width="0.83" height="15.90" rx="1.5"><title>17k: 1 estimated as 4d</title></rect>
+<line class="bar-zero" x1="714.08" y1="48.00" x2="714.08" y2="656.00"/>
+<rect class="bar" x="707.44" y="636.36" width="13.28" height="15.90" rx="1.5"><title>16k: 23 estimated as ≤20k</title></rect>
+<rect class="bar" x="710.04" y="612.97" width="8.09" height="15.90" rx="1.5"><title>16k: 14 estimated as 19k</title></rect>
+<rect class="bar" x="708.59" y="589.59" width="10.97" height="15.90" rx="1.5"><title>16k: 19 estimated as 18k</title></rect>
+<rect class="bar" x="708.59" y="566.20" width="10.97" height="15.90" rx="1.5"><title>16k: 19 estimated as 17k</title></rect>
+<rect class="bar" x="709.75" y="542.82" width="8.66" height="15.90" rx="1.5"><title>16k: 15 estimated as 16k</title></rect>
+<rect class="bar" x="702.82" y="519.43" width="22.52" height="15.90" rx="1.5"><title>16k: 39 estimated as 15k</title></rect>
+<rect class="bar" x="705.42" y="496.05" width="17.33" height="15.90" rx="1.5"><title>16k: 30 estimated as 14k</title></rect>
+<rect class="bar" x="695.89" y="472.66" width="36.39" height="15.90" rx="1.5"><title>16k: 63 estimated as 13k</title></rect>
+<rect class="bar" x="702.24" y="449.28" width="23.68" height="15.90" rx="1.5"><title>16k: 41 estimated as 12k</title></rect>
+<rect class="bar" x="704.84" y="425.90" width="18.48" height="15.90" rx="1.5"><title>16k: 32 estimated as 11k</title></rect>
+<rect class="bar" x="705.13" y="402.51" width="17.90" height="15.90" rx="1.5"><title>16k: 31 estimated as 10k</title></rect>
+<rect class="bar" x="710.61" y="379.13" width="6.93" height="15.90" rx="1.5"><title>16k: 12 estimated as 9k</title></rect>
+<rect class="bar" x="708.30" y="355.74" width="11.55" height="15.90" rx="1.5"><title>16k: 20 estimated as 8k</title></rect>
+<rect class="bar" x="710.32" y="332.36" width="7.51" height="15.90" rx="1.5"><title>16k: 13 estimated as 7k</title></rect>
+<rect class="bar" x="712.64" y="308.97" width="2.89" height="15.90" rx="1.5"><title>16k: 5 estimated as 6k</title></rect>
+<rect class="bar" x="712.92" y="285.59" width="2.31" height="15.90" rx="1.5"><title>16k: 4 estimated as 5k</title></rect>
+<rect class="bar" x="712.06" y="262.20" width="4.04" height="15.90" rx="1.5"><title>16k: 7 estimated as 4k</title></rect>
+<rect class="bar" x="712.64" y="238.82" width="2.89" height="15.90" rx="1.5"><title>16k: 5 estimated as 3k</title></rect>
+<rect class="bar" x="712.92" y="215.43" width="2.31" height="15.90" rx="1.5"><title>16k: 4 estimated as 2k</title></rect>
+<rect class="bar" x="713.50" y="192.05" width="1.16" height="15.90" rx="1.5"><title>16k: 2 estimated as 1k</title></rect>
+<rect class="bar" x="713.50" y="168.66" width="1.16" height="15.90" rx="1.5"><title>16k: 2 estimated as 1d</title></rect>
+<line class="bar-zero" x1="757.39" y1="48.00" x2="757.39" y2="656.00"/>
+<rect class="bar" x="756.81" y="636.36" width="1.17" height="15.90" rx="1.5"><title>15k: 2 estimated as ≤20k</title></rect>
+<rect class="bar" x="754.17" y="589.59" width="6.46" height="15.90" rx="1.5"><title>15k: 11 estimated as 18k</title></rect>
+<rect class="bar" x="755.63" y="566.20" width="3.52" height="15.90" rx="1.5"><title>15k: 6 estimated as 17k</title></rect>
+<rect class="bar" x="753.87" y="542.82" width="7.04" height="15.90" rx="1.5"><title>15k: 12 estimated as 16k</title></rect>
+<rect class="bar" x="750.65" y="519.43" width="13.50" height="15.90" rx="1.5"><title>15k: 23 estimated as 15k</title></rect>
+<rect class="bar" x="751.23" y="496.05" width="12.32" height="15.90" rx="1.5"><title>15k: 21 estimated as 14k</title></rect>
+<rect class="bar" x="739.20" y="472.66" width="36.39" height="15.90" rx="1.5"><title>15k: 62 estimated as 13k</title></rect>
+<rect class="bar" x="748.30" y="449.28" width="18.19" height="15.90" rx="1.5"><title>15k: 31 estimated as 12k</title></rect>
+<rect class="bar" x="743.02" y="425.90" width="28.76" height="15.90" rx="1.5"><title>15k: 49 estimated as 11k</title></rect>
+<rect class="bar" x="744.48" y="402.51" width="25.82" height="15.90" rx="1.5"><title>15k: 44 estimated as 10k</title></rect>
+<rect class="bar" x="748.59" y="379.13" width="17.61" height="15.90" rx="1.5"><title>15k: 30 estimated as 9k</title></rect>
+<rect class="bar" x="747.42" y="355.74" width="19.95" height="15.90" rx="1.5"><title>15k: 34 estimated as 8k</title></rect>
+<rect class="bar" x="748.89" y="332.36" width="17.02" height="15.90" rx="1.5"><title>15k: 29 estimated as 7k</title></rect>
+<rect class="bar" x="753.29" y="308.97" width="8.22" height="15.90" rx="1.5"><title>15k: 14 estimated as 6k</title></rect>
+<rect class="bar" x="754.46" y="285.59" width="5.87" height="15.90" rx="1.5"><title>15k: 10 estimated as 5k</title></rect>
+<rect class="bar" x="755.63" y="262.20" width="3.52" height="15.90" rx="1.5"><title>15k: 6 estimated as 4k</title></rect>
+<rect class="bar" x="756.81" y="238.82" width="1.17" height="15.90" rx="1.5"><title>15k: 2 estimated as 3k</title></rect>
+<rect class="bar" x="756.51" y="215.43" width="1.76" height="15.90" rx="1.5"><title>15k: 3 estimated as 2k</title></rect>
+<rect class="bar" x="757.10" y="192.05" width="0.59" height="15.90" rx="1.5"><title>15k: 1 estimated as 1k</title></rect>
+<rect class="bar" x="757.10" y="145.28" width="0.59" height="15.90" rx="1.5"><title>15k: 1 estimated as 2d</title></rect>
+<rect class="bar" x="757.10" y="98.51" width="0.59" height="15.90" rx="1.5"><title>15k: 1 estimated as 4d</title></rect>
+<rect class="bar" x="757.10" y="51.74" width="0.59" height="15.90" rx="1.5"><title>15k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="800.71" y1="48.00" x2="800.71" y2="656.00"/>
+<rect class="bar" x="800.43" y="636.36" width="0.55" height="15.90" rx="1.5"><title>14k: 1 estimated as ≤20k</title></rect>
+<rect class="bar" x="800.43" y="612.97" width="0.55" height="15.90" rx="1.5"><title>14k: 1 estimated as 19k</title></rect>
+<rect class="bar" x="797.40" y="589.59" width="6.62" height="15.90" rx="1.5"><title>14k: 12 estimated as 18k</title></rect>
+<rect class="bar" x="800.16" y="566.20" width="1.10" height="15.90" rx="1.5"><title>14k: 2 estimated as 17k</title></rect>
+<rect class="bar" x="798.51" y="542.82" width="4.41" height="15.90" rx="1.5"><title>14k: 8 estimated as 16k</title></rect>
+<rect class="bar" x="798.23" y="519.43" width="4.96" height="15.90" rx="1.5"><title>14k: 9 estimated as 15k</title></rect>
+<rect class="bar" x="794.92" y="496.05" width="11.58" height="15.90" rx="1.5"><title>14k: 21 estimated as 14k</title></rect>
+<rect class="bar" x="782.52" y="472.66" width="36.39" height="15.90" rx="1.5"><title>14k: 66 estimated as 13k</title></rect>
+<rect class="bar" x="794.37" y="449.28" width="12.68" height="15.90" rx="1.5"><title>14k: 23 estimated as 12k</title></rect>
+<rect class="bar" x="791.61" y="425.90" width="18.19" height="15.90" rx="1.5"><title>14k: 33 estimated as 11k</title></rect>
+<rect class="bar" x="790.24" y="402.51" width="20.95" height="15.90" rx="1.5"><title>14k: 38 estimated as 10k</title></rect>
+<rect class="bar" x="785.00" y="379.13" width="31.42" height="15.90" rx="1.5"><title>14k: 57 estimated as 9k</title></rect>
+<rect class="bar" x="785.83" y="355.74" width="29.77" height="15.90" rx="1.5"><title>14k: 54 estimated as 8k</title></rect>
+<rect class="bar" x="788.58" y="332.36" width="24.26" height="15.90" rx="1.5"><title>14k: 44 estimated as 7k</title></rect>
+<rect class="bar" x="796.30" y="308.97" width="8.82" height="15.90" rx="1.5"><title>14k: 16 estimated as 6k</title></rect>
+<rect class="bar" x="792.72" y="285.59" width="15.99" height="15.90" rx="1.5"><title>14k: 29 estimated as 5k</title></rect>
+<rect class="bar" x="795.75" y="262.20" width="9.92" height="15.90" rx="1.5"><title>14k: 18 estimated as 4k</title></rect>
+<rect class="bar" x="799.88" y="238.82" width="1.65" height="15.90" rx="1.5"><title>14k: 3 estimated as 3k</title></rect>
+<rect class="bar" x="800.16" y="215.43" width="1.10" height="15.90" rx="1.5"><title>14k: 2 estimated as 2k</title></rect>
+<rect class="bar" x="799.88" y="192.05" width="1.65" height="15.90" rx="1.5"><title>14k: 3 estimated as 1k</title></rect>
+<rect class="bar" x="800.43" y="168.66" width="0.55" height="15.90" rx="1.5"><title>14k: 1 estimated as 1d</title></rect>
+<rect class="bar" x="800.43" y="121.90" width="0.55" height="15.90" rx="1.5"><title>14k: 1 estimated as 3d</title></rect>
+<rect class="bar" x="800.43" y="51.74" width="0.55" height="15.90" rx="1.5"><title>14k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="844.03" y1="48.00" x2="844.03" y2="656.00"/>
+<rect class="bar" x="841.36" y="636.36" width="5.32" height="15.90" rx="1.5"><title>13k: 12 estimated as ≤20k</title></rect>
+<rect class="bar" x="839.37" y="589.59" width="9.32" height="15.90" rx="1.5"><title>13k: 21 estimated as 18k</title></rect>
+<rect class="bar" x="843.80" y="566.20" width="0.44" height="15.90" rx="1.5"><title>13k: 1 estimated as 17k</title></rect>
+<rect class="bar" x="842.47" y="542.82" width="3.11" height="15.90" rx="1.5"><title>13k: 7 estimated as 16k</title></rect>
+<rect class="bar" x="842.70" y="519.43" width="2.66" height="15.90" rx="1.5"><title>13k: 6 estimated as 15k</title></rect>
+<rect class="bar" x="842.25" y="496.05" width="3.55" height="15.90" rx="1.5"><title>13k: 8 estimated as 14k</title></rect>
+<rect class="bar" x="833.60" y="472.66" width="20.85" height="15.90" rx="1.5"><title>13k: 47 estimated as 13k</title></rect>
+<rect class="bar" x="838.70" y="449.28" width="10.65" height="15.90" rx="1.5"><title>13k: 24 estimated as 12k</title></rect>
+<rect class="bar" x="837.15" y="425.90" width="13.76" height="15.90" rx="1.5"><title>13k: 31 estimated as 11k</title></rect>
+<rect class="bar" x="837.15" y="402.51" width="13.76" height="15.90" rx="1.5"><title>13k: 31 estimated as 10k</title></rect>
+<rect class="bar" x="836.93" y="379.13" width="14.20" height="15.90" rx="1.5"><title>13k: 32 estimated as 9k</title></rect>
+<rect class="bar" x="830.94" y="355.74" width="26.18" height="15.90" rx="1.5"><title>13k: 59 estimated as 8k</title></rect>
+<rect class="bar" x="825.83" y="332.36" width="36.39" height="15.90" rx="1.5"><title>13k: 82 estimated as 7k</title></rect>
+<rect class="bar" x="835.37" y="308.97" width="17.31" height="15.90" rx="1.5"><title>13k: 39 estimated as 6k</title></rect>
+<rect class="bar" x="830.49" y="285.59" width="27.07" height="15.90" rx="1.5"><title>13k: 61 estimated as 5k</title></rect>
+<rect class="bar" x="838.92" y="262.20" width="10.21" height="15.90" rx="1.5"><title>13k: 23 estimated as 4k</title></rect>
+<rect class="bar" x="841.59" y="238.82" width="4.88" height="15.90" rx="1.5"><title>13k: 11 estimated as 3k</title></rect>
+<rect class="bar" x="842.70" y="215.43" width="2.66" height="15.90" rx="1.5"><title>13k: 6 estimated as 2k</title></rect>
+<rect class="bar" x="842.92" y="192.05" width="2.22" height="15.90" rx="1.5"><title>13k: 5 estimated as 1k</title></rect>
+<rect class="bar" x="843.80" y="168.66" width="0.44" height="15.90" rx="1.5"><title>13k: 1 estimated as 1d</title></rect>
+<rect class="bar" x="843.58" y="145.28" width="0.89" height="15.90" rx="1.5"><title>13k: 2 estimated as 2d</title></rect>
+<rect class="bar" x="843.36" y="121.90" width="1.33" height="15.90" rx="1.5"><title>13k: 3 estimated as 3d</title></rect>
+<rect class="bar" x="843.80" y="51.74" width="0.44" height="15.90" rx="1.5"><title>13k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="887.34" y1="48.00" x2="887.34" y2="656.00"/>
+<rect class="bar" x="886.71" y="636.36" width="1.27" height="15.90" rx="1.5"><title>12k: 3 estimated as ≤20k</title></rect>
+<rect class="bar" x="886.07" y="589.59" width="2.54" height="15.90" rx="1.5"><title>12k: 6 estimated as 18k</title></rect>
+<rect class="bar" x="887.13" y="566.20" width="0.42" height="15.90" rx="1.5"><title>12k: 1 estimated as 17k</title></rect>
+<rect class="bar" x="887.13" y="542.82" width="0.42" height="15.90" rx="1.5"><title>12k: 1 estimated as 16k</title></rect>
+<rect class="bar" x="886.92" y="519.43" width="0.85" height="15.90" rx="1.5"><title>12k: 2 estimated as 15k</title></rect>
+<rect class="bar" x="887.13" y="496.05" width="0.42" height="15.90" rx="1.5"><title>12k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="881.42" y="472.66" width="11.85" height="15.90" rx="1.5"><title>12k: 28 estimated as 13k</title></rect>
+<rect class="bar" x="884.80" y="449.28" width="5.08" height="15.90" rx="1.5"><title>12k: 12 estimated as 12k</title></rect>
+<rect class="bar" x="883.96" y="425.90" width="6.77" height="15.90" rx="1.5"><title>12k: 16 estimated as 11k</title></rect>
+<rect class="bar" x="882.48" y="402.51" width="9.73" height="15.90" rx="1.5"><title>12k: 23 estimated as 10k</title></rect>
+<rect class="bar" x="881.00" y="379.13" width="12.69" height="15.90" rx="1.5"><title>12k: 30 estimated as 9k</title></rect>
+<rect class="bar" x="874.65" y="355.74" width="25.39" height="15.90" rx="1.5"><title>12k: 60 estimated as 8k</title></rect>
+<rect class="bar" x="869.15" y="332.36" width="36.39" height="15.90" rx="1.5"><title>12k: 86 estimated as 7k</title></rect>
+<rect class="bar" x="876.34" y="308.97" width="22.00" height="15.90" rx="1.5"><title>12k: 52 estimated as 6k</title></rect>
+<rect class="bar" x="872.75" y="285.59" width="29.19" height="15.90" rx="1.5"><title>12k: 69 estimated as 5k</title></rect>
+<rect class="bar" x="876.76" y="262.20" width="21.15" height="15.90" rx="1.5"><title>12k: 50 estimated as 4k</title></rect>
+<rect class="bar" x="881.00" y="238.82" width="12.69" height="15.90" rx="1.5"><title>12k: 30 estimated as 3k</title></rect>
+<rect class="bar" x="884.80" y="215.43" width="5.08" height="15.90" rx="1.5"><title>12k: 12 estimated as 2k</title></rect>
+<rect class="bar" x="886.71" y="192.05" width="1.27" height="15.90" rx="1.5"><title>12k: 3 estimated as 1k</title></rect>
+<rect class="bar" x="887.13" y="168.66" width="0.42" height="15.90" rx="1.5"><title>12k: 1 estimated as 1d</title></rect>
+<rect class="bar" x="887.13" y="121.90" width="0.42" height="15.90" rx="1.5"><title>12k: 1 estimated as 3d</title></rect>
+<rect class="bar" x="886.92" y="98.51" width="0.85" height="15.90" rx="1.5"><title>12k: 2 estimated as 4d</title></rect>
+<line class="bar-zero" x1="930.66" y1="48.00" x2="930.66" y2="656.00"/>
+<rect class="bar" x="929.98" y="636.36" width="1.36" height="15.90" rx="1.5"><title>11k: 3 estimated as ≤20k</title></rect>
+<rect class="bar" x="929.98" y="589.59" width="1.36" height="15.90" rx="1.5"><title>11k: 3 estimated as 18k</title></rect>
+<rect class="bar" x="930.43" y="566.20" width="0.45" height="15.90" rx="1.5"><title>11k: 1 estimated as 17k</title></rect>
+<rect class="bar" x="930.43" y="542.82" width="0.45" height="15.90" rx="1.5"><title>11k: 1 estimated as 16k</title></rect>
+<rect class="bar" x="930.20" y="519.43" width="0.91" height="15.90" rx="1.5"><title>11k: 2 estimated as 15k</title></rect>
+<rect class="bar" x="930.43" y="496.05" width="0.45" height="15.90" rx="1.5"><title>11k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="925.88" y="472.66" width="9.55" height="15.90" rx="1.5"><title>11k: 21 estimated as 13k</title></rect>
+<rect class="bar" x="929.75" y="449.28" width="1.82" height="15.90" rx="1.5"><title>11k: 4 estimated as 12k</title></rect>
+<rect class="bar" x="928.84" y="425.90" width="3.64" height="15.90" rx="1.5"><title>11k: 8 estimated as 11k</title></rect>
+<rect class="bar" x="926.79" y="402.51" width="7.73" height="15.90" rx="1.5"><title>11k: 17 estimated as 10k</title></rect>
+<rect class="bar" x="926.34" y="379.13" width="8.64" height="15.90" rx="1.5"><title>11k: 19 estimated as 9k</title></rect>
+<rect class="bar" x="918.38" y="355.74" width="24.56" height="15.90" rx="1.5"><title>11k: 54 estimated as 8k</title></rect>
+<rect class="bar" x="912.47" y="332.36" width="36.39" height="15.90" rx="1.5"><title>11k: 80 estimated as 7k</title></rect>
+<rect class="bar" x="917.24" y="308.97" width="26.83" height="15.90" rx="1.5"><title>11k: 59 estimated as 6k</title></rect>
+<rect class="bar" x="914.28" y="285.59" width="32.75" height="15.90" rx="1.5"><title>11k: 72 estimated as 5k</title></rect>
+<rect class="bar" x="915.19" y="262.20" width="30.93" height="15.90" rx="1.5"><title>11k: 68 estimated as 4k</title></rect>
+<rect class="bar" x="920.65" y="238.82" width="20.01" height="15.90" rx="1.5"><title>11k: 44 estimated as 3k</title></rect>
+<rect class="bar" x="927.02" y="215.43" width="7.28" height="15.90" rx="1.5"><title>11k: 16 estimated as 2k</title></rect>
+<rect class="bar" x="929.29" y="192.05" width="2.73" height="15.90" rx="1.5"><title>11k: 6 estimated as 1k</title></rect>
+<rect class="bar" x="930.20" y="168.66" width="0.91" height="15.90" rx="1.5"><title>11k: 2 estimated as 1d</title></rect>
+<rect class="bar" x="930.43" y="145.28" width="0.45" height="15.90" rx="1.5"><title>11k: 1 estimated as 2d</title></rect>
+<rect class="bar" x="930.43" y="121.90" width="0.45" height="15.90" rx="1.5"><title>11k: 1 estimated as 3d</title></rect>
+<rect class="bar" x="930.43" y="98.51" width="0.45" height="15.90" rx="1.5"><title>11k: 1 estimated as 4d</title></rect>
+<rect class="bar" x="930.20" y="51.74" width="0.91" height="15.90" rx="1.5"><title>11k: 2 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="973.97" y1="48.00" x2="973.97" y2="656.00"/>
+<rect class="bar" x="973.76" y="636.36" width="0.43" height="15.90" rx="1.5"><title>10k: 1 estimated as ≤20k</title></rect>
+<rect class="bar" x="973.76" y="612.97" width="0.43" height="15.90" rx="1.5"><title>10k: 1 estimated as 19k</title></rect>
+<rect class="bar" x="973.33" y="589.59" width="1.28" height="15.90" rx="1.5"><title>10k: 3 estimated as 18k</title></rect>
+<rect class="bar" x="973.55" y="542.82" width="0.86" height="15.90" rx="1.5"><title>10k: 2 estimated as 16k</title></rect>
+<rect class="bar" x="973.76" y="519.43" width="0.43" height="15.90" rx="1.5"><title>10k: 1 estimated as 15k</title></rect>
+<rect class="bar" x="973.55" y="496.05" width="0.86" height="15.90" rx="1.5"><title>10k: 2 estimated as 14k</title></rect>
+<rect class="bar" x="971.41" y="472.66" width="5.14" height="15.90" rx="1.5"><title>10k: 12 estimated as 13k</title></rect>
+<rect class="bar" x="973.33" y="449.28" width="1.28" height="15.90" rx="1.5"><title>10k: 3 estimated as 12k</title></rect>
+<rect class="bar" x="973.33" y="425.90" width="1.28" height="15.90" rx="1.5"><title>10k: 3 estimated as 11k</title></rect>
+<rect class="bar" x="971.83" y="402.51" width="4.28" height="15.90" rx="1.5"><title>10k: 10 estimated as 10k</title></rect>
+<rect class="bar" x="971.41" y="379.13" width="5.14" height="15.90" rx="1.5"><title>10k: 12 estimated as 9k</title></rect>
+<rect class="bar" x="966.05" y="355.74" width="15.84" height="15.90" rx="1.5"><title>10k: 37 estimated as 8k</title></rect>
+<rect class="bar" x="960.49" y="332.36" width="26.97" height="15.90" rx="1.5"><title>10k: 63 estimated as 7k</title></rect>
+<rect class="bar" x="961.56" y="308.97" width="24.83" height="15.90" rx="1.5"><title>10k: 58 estimated as 6k</title></rect>
+<rect class="bar" x="955.78" y="285.59" width="36.39" height="15.90" rx="1.5"><title>10k: 85 estimated as 5k</title></rect>
+<rect class="bar" x="958.78" y="262.20" width="30.39" height="15.90" rx="1.5"><title>10k: 71 estimated as 4k</title></rect>
+<rect class="bar" x="961.77" y="238.82" width="24.40" height="15.90" rx="1.5"><title>10k: 57 estimated as 3k</title></rect>
+<rect class="bar" x="966.91" y="215.43" width="14.13" height="15.90" rx="1.5"><title>10k: 33 estimated as 2k</title></rect>
+<rect class="bar" x="971.83" y="192.05" width="4.28" height="15.90" rx="1.5"><title>10k: 10 estimated as 1k</title></rect>
+<rect class="bar" x="973.12" y="168.66" width="1.71" height="15.90" rx="1.5"><title>10k: 4 estimated as 1d</title></rect>
+<rect class="bar" x="973.55" y="145.28" width="0.86" height="15.90" rx="1.5"><title>10k: 2 estimated as 2d</title></rect>
+<rect class="bar" x="973.76" y="98.51" width="0.43" height="15.90" rx="1.5"><title>10k: 1 estimated as 4d</title></rect>
+<rect class="bar" x="973.76" y="51.74" width="0.43" height="15.90" rx="1.5"><title>10k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1017.29" y1="48.00" x2="1017.29" y2="656.00"/>
+<rect class="bar" x="1016.38" y="636.36" width="1.82" height="15.90" rx="1.5"><title>9k: 4 estimated as ≤20k</title></rect>
+<rect class="bar" x="1016.83" y="589.59" width="0.91" height="15.90" rx="1.5"><title>9k: 2 estimated as 18k</title></rect>
+<rect class="bar" x="1015.47" y="472.66" width="3.64" height="15.90" rx="1.5"><title>9k: 8 estimated as 13k</title></rect>
+<rect class="bar" x="1016.83" y="425.90" width="0.91" height="15.90" rx="1.5"><title>9k: 2 estimated as 11k</title></rect>
+<rect class="bar" x="1016.83" y="402.51" width="0.91" height="15.90" rx="1.5"><title>9k: 2 estimated as 10k</title></rect>
+<rect class="bar" x="1016.61" y="379.13" width="1.36" height="15.90" rx="1.5"><title>9k: 3 estimated as 9k</title></rect>
+<rect class="bar" x="1015.24" y="355.74" width="4.09" height="15.90" rx="1.5"><title>9k: 9 estimated as 8k</title></rect>
+<rect class="bar" x="1008.88" y="332.36" width="16.83" height="15.90" rx="1.5"><title>9k: 37 estimated as 7k</title></rect>
+<rect class="bar" x="1007.51" y="308.97" width="19.56" height="15.90" rx="1.5"><title>9k: 43 estimated as 6k</title></rect>
+<rect class="bar" x="1001.83" y="285.59" width="30.93" height="15.90" rx="1.5"><title>9k: 68 estimated as 5k</title></rect>
+<rect class="bar" x="999.10" y="262.20" width="36.39" height="15.90" rx="1.5"><title>9k: 80 estimated as 4k</title></rect>
+<rect class="bar" x="1002.05" y="238.82" width="30.47" height="15.90" rx="1.5"><title>9k: 67 estimated as 3k</title></rect>
+<rect class="bar" x="1006.37" y="215.43" width="21.83" height="15.90" rx="1.5"><title>9k: 48 estimated as 2k</title></rect>
+<rect class="bar" x="1013.88" y="192.05" width="6.82" height="15.90" rx="1.5"><title>9k: 15 estimated as 1k</title></rect>
+<rect class="bar" x="1015.47" y="168.66" width="3.64" height="15.90" rx="1.5"><title>9k: 8 estimated as 1d</title></rect>
+<rect class="bar" x="1016.61" y="145.28" width="1.36" height="15.90" rx="1.5"><title>9k: 3 estimated as 2d</title></rect>
+<rect class="bar" x="1017.06" y="121.90" width="0.45" height="15.90" rx="1.5"><title>9k: 1 estimated as 3d</title></rect>
+<line class="bar-zero" x1="1060.61" y1="48.00" x2="1060.61" y2="656.00"/>
+<rect class="bar" x="1060.43" y="496.05" width="0.36" height="15.90" rx="1.5"><title>8k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="1060.07" y="472.66" width="1.07" height="15.90" rx="1.5"><title>8k: 3 estimated as 13k</title></rect>
+<rect class="bar" x="1060.43" y="425.90" width="0.36" height="15.90" rx="1.5"><title>8k: 1 estimated as 11k</title></rect>
+<rect class="bar" x="1060.07" y="402.51" width="1.07" height="15.90" rx="1.5"><title>8k: 3 estimated as 10k</title></rect>
+<rect class="bar" x="1059.54" y="355.74" width="2.14" height="15.90" rx="1.5"><title>8k: 6 estimated as 8k</title></rect>
+<rect class="bar" x="1056.15" y="332.36" width="8.92" height="15.90" rx="1.5"><title>8k: 25 estimated as 7k</title></rect>
+<rect class="bar" x="1054.54" y="308.97" width="12.13" height="15.90" rx="1.5"><title>8k: 34 estimated as 6k</title></rect>
+<rect class="bar" x="1047.59" y="285.59" width="26.04" height="15.90" rx="1.5"><title>8k: 73 estimated as 5k</title></rect>
+<rect class="bar" x="1042.41" y="262.20" width="36.39" height="15.90" rx="1.5"><title>8k: 102 estimated as 4k</title></rect>
+<rect class="bar" x="1046.34" y="238.82" width="28.54" height="15.90" rx="1.5"><title>8k: 80 estimated as 3k</title></rect>
+<rect class="bar" x="1054.18" y="215.43" width="12.84" height="15.90" rx="1.5"><title>8k: 36 estimated as 2k</title></rect>
+<rect class="bar" x="1056.32" y="192.05" width="8.56" height="15.90" rx="1.5"><title>8k: 24 estimated as 1k</title></rect>
+<rect class="bar" x="1057.39" y="168.66" width="6.42" height="15.90" rx="1.5"><title>8k: 18 estimated as 1d</title></rect>
+<rect class="bar" x="1059.18" y="145.28" width="2.85" height="15.90" rx="1.5"><title>8k: 8 estimated as 2d</title></rect>
+<rect class="bar" x="1060.43" y="51.74" width="0.36" height="15.90" rx="1.5"><title>8k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1103.92" y1="48.00" x2="1103.92" y2="656.00"/>
+<rect class="bar" x="1103.77" y="589.59" width="0.31" height="15.90" rx="1.5"><title>7k: 1 estimated as 18k</title></rect>
+<rect class="bar" x="1103.61" y="472.66" width="0.62" height="15.90" rx="1.5"><title>7k: 2 estimated as 13k</title></rect>
+<rect class="bar" x="1103.77" y="402.51" width="0.31" height="15.90" rx="1.5"><title>7k: 1 estimated as 10k</title></rect>
+<rect class="bar" x="1102.21" y="332.36" width="3.42" height="15.90" rx="1.5"><title>7k: 11 estimated as 7k</title></rect>
+<rect class="bar" x="1101.43" y="308.97" width="4.98" height="15.90" rx="1.5"><title>7k: 16 estimated as 6k</title></rect>
+<rect class="bar" x="1095.52" y="285.59" width="16.79" height="15.90" rx="1.5"><title>7k: 54 estimated as 5k</title></rect>
+<rect class="bar" x="1085.73" y="262.20" width="36.39" height="15.90" rx="1.5"><title>7k: 117 estimated as 4k</title></rect>
+<rect class="bar" x="1090.08" y="238.82" width="27.68" height="15.90" rx="1.5"><title>7k: 89 estimated as 3k</title></rect>
+<rect class="bar" x="1095.21" y="215.43" width="17.42" height="15.90" rx="1.5"><title>7k: 56 estimated as 2k</title></rect>
+<rect class="bar" x="1099.88" y="192.05" width="8.09" height="15.90" rx="1.5"><title>7k: 26 estimated as 1k</title></rect>
+<rect class="bar" x="1102.68" y="168.66" width="2.49" height="15.90" rx="1.5"><title>7k: 8 estimated as 1d</title></rect>
+<rect class="bar" x="1103.14" y="145.28" width="1.55" height="15.90" rx="1.5"><title>7k: 5 estimated as 2d</title></rect>
+<rect class="bar" x="1103.45" y="51.74" width="0.93" height="15.90" rx="1.5"><title>7k: 3 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1147.24" y1="48.00" x2="1147.24" y2="656.00"/>
+<rect class="bar" x="1147.13" y="589.59" width="0.22" height="15.90" rx="1.5"><title>6k: 1 estimated as 18k</title></rect>
+<rect class="bar" x="1147.13" y="496.05" width="0.22" height="15.90" rx="1.5"><title>6k: 1 estimated as 14k</title></rect>
+<rect class="bar" x="1147.13" y="472.66" width="0.22" height="15.90" rx="1.5"><title>6k: 1 estimated as 13k</title></rect>
+<rect class="bar" x="1147.13" y="449.28" width="0.22" height="15.90" rx="1.5"><title>6k: 1 estimated as 12k</title></rect>
+<rect class="bar" x="1147.13" y="402.51" width="0.22" height="15.90" rx="1.5"><title>6k: 1 estimated as 10k</title></rect>
+<rect class="bar" x="1147.13" y="379.13" width="0.22" height="15.90" rx="1.5"><title>6k: 1 estimated as 9k</title></rect>
+<rect class="bar" x="1147.02" y="355.74" width="0.44" height="15.90" rx="1.5"><title>6k: 2 estimated as 8k</title></rect>
+<rect class="bar" x="1146.69" y="332.36" width="1.09" height="15.90" rx="1.5"><title>6k: 5 estimated as 7k</title></rect>
+<rect class="bar" x="1146.15" y="308.97" width="2.18" height="15.90" rx="1.5"><title>6k: 10 estimated as 6k</title></rect>
+<rect class="bar" x="1142.12" y="285.59" width="10.24" height="15.90" rx="1.5"><title>6k: 47 estimated as 5k</title></rect>
+<rect class="bar" x="1136.13" y="262.20" width="22.22" height="15.90" rx="1.5"><title>6k: 102 estimated as 4k</title></rect>
+<rect class="bar" x="1129.04" y="238.82" width="36.39" height="15.90" rx="1.5"><title>6k: 167 estimated as 3k</title></rect>
+<rect class="bar" x="1138.30" y="215.43" width="17.87" height="15.90" rx="1.5"><title>6k: 82 estimated as 2k</title></rect>
+<rect class="bar" x="1143.64" y="192.05" width="7.19" height="15.90" rx="1.5"><title>6k: 33 estimated as 1k</title></rect>
+<rect class="bar" x="1145.49" y="168.66" width="3.49" height="15.90" rx="1.5"><title>6k: 16 estimated as 1d</title></rect>
+<rect class="bar" x="1146.47" y="145.28" width="1.53" height="15.90" rx="1.5"><title>6k: 7 estimated as 2d</title></rect>
+<rect class="bar" x="1146.58" y="121.90" width="1.31" height="15.90" rx="1.5"><title>6k: 6 estimated as 3d</title></rect>
+<rect class="bar" x="1147.13" y="98.51" width="0.22" height="15.90" rx="1.5"><title>6k: 1 estimated as 4d</title></rect>
+<line class="bar-zero" x1="1190.55" y1="48.00" x2="1190.55" y2="656.00"/>
+<rect class="bar" x="1190.26" y="636.36" width="0.58" height="15.90" rx="1.5"><title>5k: 2 estimated as ≤20k</title></rect>
+<rect class="bar" x="1190.41" y="472.66" width="0.29" height="15.90" rx="1.5"><title>5k: 1 estimated as 13k</title></rect>
+<rect class="bar" x="1190.41" y="402.51" width="0.29" height="15.90" rx="1.5"><title>5k: 1 estimated as 10k</title></rect>
+<rect class="bar" x="1190.41" y="355.74" width="0.29" height="15.90" rx="1.5"><title>5k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="1190.41" y="332.36" width="0.29" height="15.90" rx="1.5"><title>5k: 1 estimated as 7k</title></rect>
+<rect class="bar" x="1189.69" y="308.97" width="1.73" height="15.90" rx="1.5"><title>5k: 6 estimated as 6k</title></rect>
+<rect class="bar" x="1187.09" y="285.59" width="6.93" height="15.90" rx="1.5"><title>5k: 24 estimated as 5k</title></rect>
+<rect class="bar" x="1177.70" y="262.20" width="25.70" height="15.90" rx="1.5"><title>5k: 89 estimated as 4k</title></rect>
+<rect class="bar" x="1172.36" y="238.82" width="36.39" height="15.90" rx="1.5"><title>5k: 126 estimated as 3k</title></rect>
+<rect class="bar" x="1175.54" y="215.43" width="30.03" height="15.90" rx="1.5"><title>5k: 104 estimated as 2k</title></rect>
+<rect class="bar" x="1183.33" y="192.05" width="14.44" height="15.90" rx="1.5"><title>5k: 50 estimated as 1k</title></rect>
+<rect class="bar" x="1187.95" y="168.66" width="5.20" height="15.90" rx="1.5"><title>5k: 18 estimated as 1d</title></rect>
+<rect class="bar" x="1189.54" y="145.28" width="2.02" height="15.90" rx="1.5"><title>5k: 7 estimated as 2d</title></rect>
+<rect class="bar" x="1190.12" y="121.90" width="0.87" height="15.90" rx="1.5"><title>5k: 3 estimated as 3d</title></rect>
+<line class="bar-zero" x1="1233.87" y1="48.00" x2="1233.87" y2="656.00"/>
+<rect class="bar" x="1233.72" y="402.51" width="0.30" height="15.90" rx="1.5"><title>4k: 1 estimated as 10k</title></rect>
+<rect class="bar" x="1233.72" y="379.13" width="0.30" height="15.90" rx="1.5"><title>4k: 1 estimated as 9k</title></rect>
+<rect class="bar" x="1233.72" y="355.74" width="0.30" height="15.90" rx="1.5"><title>4k: 1 estimated as 8k</title></rect>
+<rect class="bar" x="1232.35" y="285.59" width="3.03" height="15.90" rx="1.5"><title>4k: 10 estimated as 5k</title></rect>
+<rect class="bar" x="1229.02" y="262.20" width="9.70" height="15.90" rx="1.5"><title>4k: 32 estimated as 4k</title></rect>
+<rect class="bar" x="1220.22" y="238.82" width="27.29" height="15.90" rx="1.5"><title>4k: 90 estimated as 3k</title></rect>
+<rect class="bar" x="1215.68" y="215.43" width="36.39" height="15.90" rx="1.5"><title>4k: 120 estimated as 2k</title></rect>
+<rect class="bar" x="1222.04" y="192.05" width="23.65" height="15.90" rx="1.5"><title>4k: 78 estimated as 1k</title></rect>
+<rect class="bar" x="1229.93" y="168.66" width="7.88" height="15.90" rx="1.5"><title>4k: 26 estimated as 1d</title></rect>
+<rect class="bar" x="1232.50" y="145.28" width="2.73" height="15.90" rx="1.5"><title>4k: 9 estimated as 2d</title></rect>
+<rect class="bar" x="1233.57" y="121.90" width="0.61" height="15.90" rx="1.5"><title>4k: 2 estimated as 3d</title></rect>
+<rect class="bar" x="1233.72" y="98.51" width="0.30" height="15.90" rx="1.5"><title>4k: 1 estimated as 4d</title></rect>
+<line class="bar-zero" x1="1277.18" y1="48.00" x2="1277.18" y2="656.00"/>
+<rect class="bar" x="1276.98" y="519.43" width="0.42" height="15.90" rx="1.5"><title>3k: 1 estimated as 15k</title></rect>
+<rect class="bar" x="1276.98" y="472.66" width="0.42" height="15.90" rx="1.5"><title>3k: 1 estimated as 13k</title></rect>
+<rect class="bar" x="1276.77" y="308.97" width="0.84" height="15.90" rx="1.5"><title>3k: 2 estimated as 6k</title></rect>
+<rect class="bar" x="1276.14" y="285.59" width="2.09" height="15.90" rx="1.5"><title>3k: 5 estimated as 5k</title></rect>
+<rect class="bar" x="1275.51" y="262.20" width="3.35" height="15.90" rx="1.5"><title>3k: 8 estimated as 4k</title></rect>
+<rect class="bar" x="1267.98" y="238.82" width="18.40" height="15.90" rx="1.5"><title>3k: 44 estimated as 3k</title></rect>
+<rect class="bar" x="1258.99" y="215.43" width="36.39" height="15.90" rx="1.5"><title>3k: 87 estimated as 2k</title></rect>
+<rect class="bar" x="1259.41" y="192.05" width="35.55" height="15.90" rx="1.5"><title>3k: 85 estimated as 1k</title></rect>
+<rect class="bar" x="1269.66" y="168.66" width="15.06" height="15.90" rx="1.5"><title>3k: 36 estimated as 1d</title></rect>
+<rect class="bar" x="1275.72" y="145.28" width="2.93" height="15.90" rx="1.5"><title>3k: 7 estimated as 2d</title></rect>
+<rect class="bar" x="1276.56" y="121.90" width="1.25" height="15.90" rx="1.5"><title>3k: 3 estimated as 3d</title></rect>
+<rect class="bar" x="1276.98" y="98.51" width="0.42" height="15.90" rx="1.5"><title>3k: 1 estimated as 4d</title></rect>
+<rect class="bar" x="1276.98" y="51.74" width="0.42" height="15.90" rx="1.5"><title>3k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1320.50" y1="48.00" x2="1320.50" y2="656.00"/>
+<rect class="bar" x="1320.22" y="308.97" width="0.57" height="15.90" rx="1.5"><title>2k: 1 estimated as 6k</title></rect>
+<rect class="bar" x="1319.65" y="285.59" width="1.71" height="15.90" rx="1.5"><title>2k: 3 estimated as 5k</title></rect>
+<rect class="bar" x="1318.51" y="262.20" width="3.98" height="15.90" rx="1.5"><title>2k: 7 estimated as 4k</title></rect>
+<rect class="bar" x="1314.25" y="238.82" width="12.51" height="15.90" rx="1.5"><title>2k: 22 estimated as 3k</title></rect>
+<rect class="bar" x="1305.15" y="215.43" width="30.70" height="15.90" rx="1.5"><title>2k: 54 estimated as 2k</title></rect>
+<rect class="bar" x="1302.31" y="192.05" width="36.39" height="15.90" rx="1.5"><title>2k: 64 estimated as 1k</title></rect>
+<rect class="bar" x="1309.70" y="168.66" width="21.60" height="15.90" rx="1.5"><title>2k: 38 estimated as 1d</title></rect>
+<rect class="bar" x="1315.95" y="145.28" width="9.10" height="15.90" rx="1.5"><title>2k: 16 estimated as 2d</title></rect>
+<rect class="bar" x="1318.51" y="121.90" width="3.98" height="15.90" rx="1.5"><title>2k: 7 estimated as 3d</title></rect>
+<rect class="bar" x="1319.65" y="98.51" width="1.71" height="15.90" rx="1.5"><title>2k: 3 estimated as 4d</title></rect>
+<rect class="bar" x="1320.22" y="51.74" width="0.57" height="15.90" rx="1.5"><title>2k: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1363.82" y1="48.00" x2="1363.82" y2="656.00"/>
+<rect class="bar" x="1363.38" y="589.59" width="0.87" height="15.90" rx="1.5"><title>1k: 1 estimated as 18k</title></rect>
+<rect class="bar" x="1363.38" y="332.36" width="0.87" height="15.90" rx="1.5"><title>1k: 1 estimated as 7k</title></rect>
+<rect class="bar" x="1363.38" y="262.20" width="0.87" height="15.90" rx="1.5"><title>1k: 1 estimated as 4k</title></rect>
+<rect class="bar" x="1362.52" y="238.82" width="2.60" height="15.90" rx="1.5"><title>1k: 3 estimated as 3k</title></rect>
+<rect class="bar" x="1358.18" y="215.43" width="11.26" height="15.90" rx="1.5"><title>1k: 13 estimated as 2k</title></rect>
+<rect class="bar" x="1351.69" y="192.05" width="24.26" height="15.90" rx="1.5"><title>1k: 28 estimated as 1k</title></rect>
+<rect class="bar" x="1345.62" y="168.66" width="36.39" height="15.90" rx="1.5"><title>1k: 42 estimated as 1d</title></rect>
+<rect class="bar" x="1354.29" y="145.28" width="19.06" height="15.90" rx="1.5"><title>1k: 22 estimated as 2d</title></rect>
+<rect class="bar" x="1359.05" y="121.90" width="9.53" height="15.90" rx="1.5"><title>1k: 11 estimated as 3d</title></rect>
+<rect class="bar" x="1363.38" y="98.51" width="0.87" height="15.90" rx="1.5"><title>1k: 1 estimated as 4d</title></rect>
+<rect class="bar" x="1362.52" y="51.74" width="2.60" height="15.90" rx="1.5"><title>1k: 3 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1407.13" y1="48.00" x2="1407.13" y2="656.00"/>
+<rect class="bar" x="1406.60" y="636.36" width="1.07" height="15.90" rx="1.5"><title>1d: 1 estimated as ≤20k</title></rect>
+<rect class="bar" x="1406.60" y="472.66" width="1.07" height="15.90" rx="1.5"><title>1d: 1 estimated as 13k</title></rect>
+<rect class="bar" x="1406.60" y="449.28" width="1.07" height="15.90" rx="1.5"><title>1d: 1 estimated as 12k</title></rect>
+<rect class="bar" x="1406.06" y="285.59" width="2.14" height="15.90" rx="1.5"><title>1d: 2 estimated as 5k</title></rect>
+<rect class="bar" x="1405.53" y="262.20" width="3.21" height="15.90" rx="1.5"><title>1d: 3 estimated as 4k</title></rect>
+<rect class="bar" x="1406.60" y="238.82" width="1.07" height="15.90" rx="1.5"><title>1d: 1 estimated as 3k</title></rect>
+<rect class="bar" x="1406.60" y="215.43" width="1.07" height="15.90" rx="1.5"><title>1d: 1 estimated as 2k</title></rect>
+<rect class="bar" x="1396.43" y="192.05" width="21.40" height="15.90" rx="1.5"><title>1d: 20 estimated as 1k</title></rect>
+<rect class="bar" x="1388.94" y="168.66" width="36.39" height="15.90" rx="1.5"><title>1d: 34 estimated as 1d</title></rect>
+<rect class="bar" x="1394.82" y="145.28" width="24.61" height="15.90" rx="1.5"><title>1d: 23 estimated as 2d</title></rect>
+<rect class="bar" x="1401.78" y="121.90" width="10.70" height="15.90" rx="1.5"><title>1d: 10 estimated as 3d</title></rect>
+<rect class="bar" x="1406.06" y="98.51" width="2.14" height="15.90" rx="1.5"><title>1d: 2 estimated as 4d</title></rect>
+<rect class="bar" x="1404.99" y="51.74" width="4.28" height="15.90" rx="1.5"><title>1d: 4 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1450.45" y1="48.00" x2="1450.45" y2="656.00"/>
+<rect class="bar" x="1447.65" y="192.05" width="5.60" height="15.90" rx="1.5"><title>2d: 2 estimated as 1k</title></rect>
+<rect class="bar" x="1432.25" y="168.66" width="36.39" height="15.90" rx="1.5"><title>2d: 13 estimated as 1d</title></rect>
+<rect class="bar" x="1435.05" y="145.28" width="30.79" height="15.90" rx="1.5"><title>2d: 11 estimated as 2d</title></rect>
+<rect class="bar" x="1439.25" y="121.90" width="22.39" height="15.90" rx="1.5"><title>2d: 8 estimated as 3d</title></rect>
+<rect class="bar" x="1447.65" y="98.51" width="5.60" height="15.90" rx="1.5"><title>2d: 2 estimated as 4d</title></rect>
+<rect class="bar" x="1446.25" y="75.13" width="8.40" height="15.90" rx="1.5"><title>2d: 3 estimated as 5d</title></rect>
+<rect class="bar" x="1449.05" y="51.74" width="2.80" height="15.90" rx="1.5"><title>2d: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1493.76" y1="48.00" x2="1493.76" y2="656.00"/>
+<rect class="bar" x="1475.57" y="145.28" width="36.39" height="15.90" rx="1.5"><title>3d: 5 estimated as 2d</title></rect>
+<rect class="bar" x="1490.12" y="121.90" width="7.28" height="15.90" rx="1.5"><title>3d: 1 estimated as 3d</title></rect>
+<rect class="bar" x="1482.85" y="98.51" width="21.83" height="15.90" rx="1.5"><title>3d: 3 estimated as 4d</title></rect>
+<rect class="bar" x="1486.49" y="75.13" width="14.55" height="15.90" rx="1.5"><title>3d: 2 estimated as 5d</title></rect>
+<rect class="bar" x="1486.49" y="51.74" width="14.55" height="15.90" rx="1.5"><title>3d: 2 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1537.08" y1="48.00" x2="1537.08" y2="656.00"/>
+<rect class="bar" x="1518.89" y="121.90" width="36.39" height="15.90" rx="1.5"><title>4d: 1 estimated as 3d</title></rect>
+<rect class="bar" x="1518.89" y="98.51" width="36.39" height="15.90" rx="1.5"><title>4d: 1 estimated as 4d</title></rect>
+<rect class="bar" x="1518.89" y="51.74" width="36.39" height="15.90" rx="1.5"><title>4d: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1623.71" y1="48.00" x2="1623.71" y2="656.00"/>
+<rect class="bar" x="1605.52" y="75.13" width="36.39" height="15.90" rx="1.5"><title>6d: 1 estimated as 5d</title></rect>
+<rect class="bar" x="1605.52" y="51.74" width="36.39" height="15.90" rx="1.5"><title>6d: 1 estimated as ≥6d</title></rect>
+<line class="bar-zero" x1="1710.34" y1="48.00" x2="1710.34" y2="656.00"/>
+<rect class="bar" x="1692.15" y="98.51" width="36.39" height="15.90" rx="1.5"><title>8d: 1 estimated as 4d</title></rect>
+<line class="identity" x1="540.82" y1="644.31" x2="1623.71" y2="59.69"><title>x = y</title></line>
+<path class="median" d="M 107.66 644.31 L 150.97 620.92 L 194.29 644.31 L 237.61 550.77 L 280.92 585.85 L 324.24 644.31 L 367.55 644.31 L 410.87 644.31 L 454.18 644.31 L 497.50 644.31 L 540.82 620.92 L 584.13 574.15 L 627.45 527.38 L 670.76 504.00 L 714.08 480.62 L 757.39 433.85 L 800.71 387.08 L 844.03 363.69 L 887.34 340.31 L 930.66 316.92 L 973.97 293.54 L 1017.29 270.15 L 1060.61 270.15 L 1103.92 270.15 L 1147.24 246.77 L 1190.55 246.77 L 1233.87 223.38 L 1277.18 223.38 L 1320.50 200.00 L 1363.82 176.62 L 1407.13 176.62 L 1450.45 153.23 L 1493.76 106.46 L 1537.08 106.46 L 1623.71 71.38 L 1710.34 106.46"/>
+<circle class="median-point" cx="107.66" cy="644.31" r="3.5"/>
+<circle class="median-point" cx="150.97" cy="620.92" r="3.5"/>
+<circle class="median-point" cx="194.29" cy="644.31" r="3.5"/>
+<circle class="median-point" cx="237.61" cy="550.77" r="3.5"/>
+<circle class="median-point" cx="280.92" cy="585.85" r="3.5"/>
+<circle class="median-point" cx="324.24" cy="644.31" r="3.5"/>
+<circle class="median-point" cx="367.55" cy="644.31" r="3.5"/>
+<circle class="median-point" cx="410.87" cy="644.31" r="3.5"/>
+<circle class="median-point" cx="454.18" cy="644.31" r="3.5"/>
+<circle class="median-point" cx="497.50" cy="644.31" r="3.5"/>
+<circle class="median-point" cx="540.82" cy="620.92" r="3.5"/>
+<circle class="median-point" cx="584.13" cy="574.15" r="3.5"/>
+<circle class="median-point" cx="627.45" cy="527.38" r="3.5"/>
+<circle class="median-point" cx="670.76" cy="504.00" r="3.5"/>
+<circle class="median-point" cx="714.08" cy="480.62" r="3.5"/>
+<circle class="median-point" cx="757.39" cy="433.85" r="3.5"/>
+<circle class="median-point" cx="800.71" cy="387.08" r="3.5"/>
+<circle class="median-point" cx="844.03" cy="363.69" r="3.5"/>
+<circle class="median-point" cx="887.34" cy="340.31" r="3.5"/>
+<circle class="median-point" cx="930.66" cy="316.92" r="3.5"/>
+<circle class="median-point" cx="973.97" cy="293.54" r="3.5"/>
+<circle class="median-point" cx="1017.29" cy="270.15" r="3.5"/>
+<circle class="median-point" cx="1060.61" cy="270.15" r="3.5"/>
+<circle class="median-point" cx="1103.92" cy="270.15" r="3.5"/>
+<circle class="median-point" cx="1147.24" cy="246.77" r="3.5"/>
+<circle class="median-point" cx="1190.55" cy="246.77" r="3.5"/>
+<circle class="median-point" cx="1233.87" cy="223.38" r="3.5"/>
+<circle class="median-point" cx="1277.18" cy="223.38" r="3.5"/>
+<circle class="median-point" cx="1320.50" cy="200.00" r="3.5"/>
+<circle class="median-point" cx="1363.82" cy="176.62" r="3.5"/>
+<circle class="median-point" cx="1407.13" cy="176.62" r="3.5"/>
+<circle class="median-point" cx="1450.45" cy="153.23" r="3.5"/>
+<circle class="median-point" cx="1493.76" cy="106.46" r="3.5"/>
+<circle class="median-point" cx="1537.08" cy="106.46" r="3.5"/>
+<circle class="median-point" cx="1623.71" cy="71.38" r="3.5"/>
+<circle class="median-point" cx="1710.34" cy="106.46" r="3.5"/>
+<line class="axis" x1="107.66" y1="656" x2="107.66" y2="661"/>
+<text class="label" x="107.66" y="676" text-anchor="middle" transform="rotate(-45 107.66 676)">30k</text>
+<text class="count" x="107.66" y="694" text-anchor="middle">n=123</text>
+<line class="axis" x1="150.97" y1="656" x2="150.97" y2="661"/>
+<text class="label" x="150.97" y="676" text-anchor="middle" transform="rotate(-45 150.97 676)">29k</text>
+<text class="count" x="150.97" y="694" text-anchor="middle">n=23</text>
+<line class="axis" x1="194.29" y1="656" x2="194.29" y2="661"/>
+<text class="label" x="194.29" y="676" text-anchor="middle" transform="rotate(-45 194.29 676)">28k</text>
+<text class="count" x="194.29" y="694" text-anchor="middle">n=13</text>
+<line class="axis" x1="237.61" y1="656" x2="237.61" y2="661"/>
+<text class="label" x="237.61" y="676" text-anchor="middle" transform="rotate(-45 237.61 676)">27k</text>
+<text class="count" x="237.61" y="694" text-anchor="middle">n=14</text>
+<line class="axis" x1="280.92" y1="656" x2="280.92" y2="661"/>
+<text class="label" x="280.92" y="676" text-anchor="middle" transform="rotate(-45 280.92 676)">26k</text>
+<text class="count" x="280.92" y="694" text-anchor="middle">n=20</text>
+<line class="axis" x1="324.24" y1="656" x2="324.24" y2="661"/>
+<text class="label" x="324.24" y="676" text-anchor="middle" transform="rotate(-45 324.24 676)">25k</text>
+<text class="count" x="324.24" y="694" text-anchor="middle">n=41</text>
+<line class="axis" x1="367.55" y1="656" x2="367.55" y2="661"/>
+<text class="label" x="367.55" y="676" text-anchor="middle" transform="rotate(-45 367.55 676)">24k</text>
+<text class="count" x="367.55" y="694" text-anchor="middle">n=39</text>
+<line class="axis" x1="410.87" y1="656" x2="410.87" y2="661"/>
+<text class="label" x="410.87" y="676" text-anchor="middle" transform="rotate(-45 410.87 676)">23k</text>
+<text class="count" x="410.87" y="694" text-anchor="middle">n=57</text>
+<line class="axis" x1="454.18" y1="656" x2="454.18" y2="661"/>
+<text class="label" x="454.18" y="676" text-anchor="middle" transform="rotate(-45 454.18 676)">22k</text>
+<text class="count" x="454.18" y="694" text-anchor="middle">n=62</text>
+<line class="axis" x1="497.50" y1="656" x2="497.50" y2="661"/>
+<text class="label" x="497.50" y="676" text-anchor="middle" transform="rotate(-45 497.50 676)">21k</text>
+<text class="count" x="497.50" y="694" text-anchor="middle">n=90</text>
+<line class="axis" x1="540.82" y1="656" x2="540.82" y2="661"/>
+<text class="label" x="540.82" y="676" text-anchor="middle" transform="rotate(-45 540.82 676)">20k</text>
+<text class="count" x="540.82" y="694" text-anchor="middle">n=127</text>
+<line class="axis" x1="584.13" y1="656" x2="584.13" y2="661"/>
+<text class="label" x="584.13" y="676" text-anchor="middle" transform="rotate(-45 584.13 676)">19k</text>
+<text class="count" x="584.13" y="694" text-anchor="middle">n=195</text>
+<line class="axis" x1="627.45" y1="656" x2="627.45" y2="661"/>
+<text class="label" x="627.45" y="676" text-anchor="middle" transform="rotate(-45 627.45 676)">18k</text>
+<text class="count" x="627.45" y="694" text-anchor="middle">n=247</text>
+<line class="axis" x1="670.76" y1="656" x2="670.76" y2="661"/>
+<text class="label" x="670.76" y="676" text-anchor="middle" transform="rotate(-45 670.76 676)">17k</text>
+<text class="count" x="670.76" y="694" text-anchor="middle">n=330</text>
+<line class="axis" x1="714.08" y1="656" x2="714.08" y2="661"/>
+<text class="label" x="714.08" y="676" text-anchor="middle" transform="rotate(-45 714.08 676)">16k</text>
+<text class="count" x="714.08" y="694" text-anchor="middle">n=400</text>
+<line class="axis" x1="757.39" y1="656" x2="757.39" y2="661"/>
+<text class="label" x="757.39" y="676" text-anchor="middle" transform="rotate(-45 757.39 676)">15k</text>
+<text class="count" x="757.39" y="694" text-anchor="middle">n=393</text>
+<line class="axis" x1="800.71" y1="656" x2="800.71" y2="661"/>
+<text class="label" x="800.71" y="676" text-anchor="middle" transform="rotate(-45 800.71 676)">14k</text>
+<text class="count" x="800.71" y="694" text-anchor="middle">n=443</text>
+<line class="axis" x1="844.03" y1="656" x2="844.03" y2="661"/>
+<text class="label" x="844.03" y="676" text-anchor="middle" transform="rotate(-45 844.03 676)">13k</text>
+<text class="count" x="844.03" y="694" text-anchor="middle">n=513</text>
+<line class="axis" x1="887.34" y1="656" x2="887.34" y2="661"/>
+<text class="label" x="887.34" y="676" text-anchor="middle" transform="rotate(-45 887.34 676)">12k</text>
+<text class="count" x="887.34" y="694" text-anchor="middle">n=489</text>
+<line class="axis" x1="930.66" y1="656" x2="930.66" y2="661"/>
+<text class="label" x="930.66" y="676" text-anchor="middle" transform="rotate(-45 930.66 676)">11k</text>
+<text class="count" x="930.66" y="694" text-anchor="middle">n=486</text>
+<line class="axis" x1="973.97" y1="656" x2="973.97" y2="661"/>
+<text class="label" x="973.97" y="676" text-anchor="middle" transform="rotate(-45 973.97 676)">10k</text>
+<text class="count" x="973.97" y="694" text-anchor="middle">n=472</text>
+<line class="axis" x1="1017.29" y1="656" x2="1017.29" y2="661"/>
+<text class="label" x="1017.29" y="676" text-anchor="middle" transform="rotate(-45 1017.29 676)">9k</text>
+<text class="count" x="1017.29" y="694" text-anchor="middle">n=400</text>
+<line class="axis" x1="1060.61" y1="656" x2="1060.61" y2="661"/>
+<text class="label" x="1060.61" y="676" text-anchor="middle" transform="rotate(-45 1060.61 676)">8k</text>
+<text class="count" x="1060.61" y="694" text-anchor="middle">n=415</text>
+<line class="axis" x1="1103.92" y1="656" x2="1103.92" y2="661"/>
+<text class="label" x="1103.92" y="676" text-anchor="middle" transform="rotate(-45 1103.92 676)">7k</text>
+<text class="count" x="1103.92" y="694" text-anchor="middle">n=389</text>
+<line class="axis" x1="1147.24" y1="656" x2="1147.24" y2="661"/>
+<text class="label" x="1147.24" y="676" text-anchor="middle" transform="rotate(-45 1147.24 676)">6k</text>
+<text class="count" x="1147.24" y="694" text-anchor="middle">n=484</text>
+<line class="axis" x1="1190.55" y1="656" x2="1190.55" y2="661"/>
+<text class="label" x="1190.55" y="676" text-anchor="middle" transform="rotate(-45 1190.55 676)">5k</text>
+<text class="count" x="1190.55" y="694" text-anchor="middle">n=433</text>
+<line class="axis" x1="1233.87" y1="656" x2="1233.87" y2="661"/>
+<text class="label" x="1233.87" y="676" text-anchor="middle" transform="rotate(-45 1233.87 676)">4k</text>
+<text class="count" x="1233.87" y="694" text-anchor="middle">n=371</text>
+<line class="axis" x1="1277.18" y1="656" x2="1277.18" y2="661"/>
+<text class="label" x="1277.18" y="676" text-anchor="middle" transform="rotate(-45 1277.18 676)">3k</text>
+<text class="count" x="1277.18" y="694" text-anchor="middle">n=281</text>
+<line class="axis" x1="1320.50" y1="656" x2="1320.50" y2="661"/>
+<text class="label" x="1320.50" y="676" text-anchor="middle" transform="rotate(-45 1320.50 676)">2k</text>
+<text class="count" x="1320.50" y="694" text-anchor="middle">n=216</text>
+<line class="axis" x1="1363.82" y1="656" x2="1363.82" y2="661"/>
+<text class="label" x="1363.82" y="676" text-anchor="middle" transform="rotate(-45 1363.82 676)">1k</text>
+<text class="count" x="1363.82" y="694" text-anchor="middle">n=126</text>
+<line class="axis" x1="1407.13" y1="656" x2="1407.13" y2="661"/>
+<text class="label" x="1407.13" y="676" text-anchor="middle" transform="rotate(-45 1407.13 676)">1d</text>
+<text class="count" x="1407.13" y="694" text-anchor="middle">n=103</text>
+<line class="axis" x1="1450.45" y1="656" x2="1450.45" y2="661"/>
+<text class="label" x="1450.45" y="676" text-anchor="middle" transform="rotate(-45 1450.45 676)">2d</text>
+<text class="count" x="1450.45" y="694" text-anchor="middle">n=40</text>
+<line class="axis" x1="1493.76" y1="656" x2="1493.76" y2="661"/>
+<text class="label" x="1493.76" y="676" text-anchor="middle" transform="rotate(-45 1493.76 676)">3d</text>
+<text class="count" x="1493.76" y="694" text-anchor="middle">n=13</text>
+<line class="axis" x1="1537.08" y1="656" x2="1537.08" y2="661"/>
+<text class="label" x="1537.08" y="676" text-anchor="middle" transform="rotate(-45 1537.08 676)">4d</text>
+<text class="count" x="1537.08" y="694" text-anchor="middle">n=3</text>
+<line class="axis" x1="1623.71" y1="656" x2="1623.71" y2="661"/>
+<text class="label" x="1623.71" y="676" text-anchor="middle" transform="rotate(-45 1623.71 676)">6d</text>
+<text class="count" x="1623.71" y="694" text-anchor="middle">n=2</text>
+<line class="axis" x1="1710.34" y1="656" x2="1710.34" y2="661"/>
+<text class="label" x="1710.34" y="676" text-anchor="middle" transform="rotate(-45 1710.34 676)">8d</text>
+<text class="count" x="1710.34" y="694" text-anchor="middle">n=1</text>
+<text class="label" x="22" y="352.00" text-anchor="middle" transform="rotate(-90 22 352.00)">Estimated KGS rank</text>
+<text class="label" x="909.00" y="744" text-anchor="middle">OGS rank bucket</text>
+</svg>

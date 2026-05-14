@@ -1,0 +1,369 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1410" height="720" viewBox="0 0 1410 720">
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #1f2933; }
+.axis { stroke: #52606d; stroke-width: 1; }
+.grid { stroke: #d9e2ec; stroke-width: 1; }
+.series-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.iqr-whisker { stroke-width: 2; stroke-linecap: round; opacity: 0.55; }
+.iqr-cap { stroke-width: 2; stroke-linecap: round; opacity: 0.55; }
+.series-point { stroke: #ffffff; stroke-width: 1.4; }
+.label { font-size: 12px; }
+.xcount { fill: #627d98; font-size: 10px; }
+.legend { font-size: 12px; }
+.title { font-size: 22px; font-weight: 700; }
+.subtitle { fill: #627d98; font-size: 13px; }
+</style>
+<rect width="1410" height="720" fill="#f8fafc"/>
+<text class="title" x="86" y="30">Yearly median predicted KGS rank by OGS rank</text>
+<text class="subtitle" x="86" y="49">Year buckets run Jan 28 to Jan 28, aligned to the 2021-01-28 adjustment date.</text>
+<line class="grid" x1="86" y1="613.08" x2="1222" y2="613.08"/>
+<text class="label" x="76" y="617.08" text-anchor="end">≤20k</text>
+<text class="label" x="1232" y="617.08" text-anchor="start">≤20k</text>
+<line class="grid" x1="86" y1="569.38" x2="1222" y2="569.38"/>
+<text class="label" x="76" y="573.38" text-anchor="end">18k</text>
+<text class="label" x="1232" y="573.38" text-anchor="start">18k</text>
+<line class="grid" x1="86" y1="525.69" x2="1222" y2="525.69"/>
+<text class="label" x="76" y="529.69" text-anchor="end">16k</text>
+<text class="label" x="1232" y="529.69" text-anchor="start">16k</text>
+<line class="grid" x1="86" y1="482.00" x2="1222" y2="482.00"/>
+<text class="label" x="76" y="486.00" text-anchor="end">14k</text>
+<text class="label" x="1232" y="486.00" text-anchor="start">14k</text>
+<line class="grid" x1="86" y1="438.31" x2="1222" y2="438.31"/>
+<text class="label" x="76" y="442.31" text-anchor="end">12k</text>
+<text class="label" x="1232" y="442.31" text-anchor="start">12k</text>
+<line class="grid" x1="86" y1="394.62" x2="1222" y2="394.62"/>
+<text class="label" x="76" y="398.62" text-anchor="end">10k</text>
+<text class="label" x="1232" y="398.62" text-anchor="start">10k</text>
+<line class="grid" x1="86" y1="350.92" x2="1222" y2="350.92"/>
+<text class="label" x="76" y="354.92" text-anchor="end">8k</text>
+<text class="label" x="1232" y="354.92" text-anchor="start">8k</text>
+<line class="grid" x1="86" y1="307.23" x2="1222" y2="307.23"/>
+<text class="label" x="76" y="311.23" text-anchor="end">6k</text>
+<text class="label" x="1232" y="311.23" text-anchor="start">6k</text>
+<line class="grid" x1="86" y1="263.54" x2="1222" y2="263.54"/>
+<text class="label" x="76" y="267.54" text-anchor="end">4k</text>
+<text class="label" x="1232" y="267.54" text-anchor="start">4k</text>
+<line class="grid" x1="86" y1="219.85" x2="1222" y2="219.85"/>
+<text class="label" x="76" y="223.85" text-anchor="end">2k</text>
+<text class="label" x="1232" y="223.85" text-anchor="start">2k</text>
+<line class="grid" x1="86" y1="176.15" x2="1222" y2="176.15"/>
+<text class="label" x="76" y="180.15" text-anchor="end">1d</text>
+<text class="label" x="1232" y="180.15" text-anchor="start">1d</text>
+<line class="grid" x1="86" y1="132.46" x2="1222" y2="132.46"/>
+<text class="label" x="76" y="136.46" text-anchor="end">3d</text>
+<text class="label" x="1232" y="136.46" text-anchor="start">3d</text>
+<line class="grid" x1="86" y1="88.77" x2="1222" y2="88.77"/>
+<text class="label" x="76" y="92.77" text-anchor="end">5d</text>
+<text class="label" x="1232" y="92.77" text-anchor="start">5d</text>
+<line class="grid" x1="86" y1="66.92" x2="1222" y2="66.92"/>
+<text class="label" x="76" y="70.92" text-anchor="end">≥6d</text>
+<text class="label" x="1232" y="70.92" text-anchor="start">≥6d</text>
+<line class="grid" x1="86.00" y1="56" x2="86.00" y2="624"/>
+<text class="label" x="86.00" y="646" text-anchor="middle" transform="rotate(-45 86.00 646)">2013</text>
+<text class="xcount" x="86.00" y="676" text-anchor="middle">n=2</text>
+<line class="grid" x1="180.67" y1="56" x2="180.67" y2="624"/>
+<text class="label" x="180.67" y="646" text-anchor="middle" transform="rotate(-45 180.67 646)">2014</text>
+<text class="xcount" x="180.67" y="676" text-anchor="middle">n=85</text>
+<line class="grid" x1="275.33" y1="56" x2="275.33" y2="624"/>
+<text class="label" x="275.33" y="646" text-anchor="middle" transform="rotate(-45 275.33 646)">2015</text>
+<text class="xcount" x="275.33" y="676" text-anchor="middle">n=100</text>
+<line class="grid" x1="370.00" y1="56" x2="370.00" y2="624"/>
+<text class="label" x="370.00" y="646" text-anchor="middle" transform="rotate(-45 370.00 646)">2016</text>
+<text class="xcount" x="370.00" y="676" text-anchor="middle">n=195</text>
+<line class="grid" x1="464.67" y1="56" x2="464.67" y2="624"/>
+<text class="label" x="464.67" y="646" text-anchor="middle" transform="rotate(-45 464.67 646)">2017</text>
+<text class="xcount" x="464.67" y="676" text-anchor="middle">n=181</text>
+<line class="grid" x1="559.33" y1="56" x2="559.33" y2="624"/>
+<text class="label" x="559.33" y="646" text-anchor="middle" transform="rotate(-45 559.33 646)">2018</text>
+<text class="xcount" x="559.33" y="676" text-anchor="middle">n=236</text>
+<line class="grid" x1="654.00" y1="56" x2="654.00" y2="624"/>
+<text class="label" x="654.00" y="646" text-anchor="middle" transform="rotate(-45 654.00 646)">2019</text>
+<text class="xcount" x="654.00" y="676" text-anchor="middle">n=261</text>
+<line class="grid" x1="748.67" y1="56" x2="748.67" y2="624"/>
+<text class="label" x="748.67" y="646" text-anchor="middle" transform="rotate(-45 748.67 646)">2020</text>
+<text class="xcount" x="748.67" y="676" text-anchor="middle">n=465</text>
+<line class="grid" x1="843.33" y1="56" x2="843.33" y2="624"/>
+<text class="label" x="843.33" y="646" text-anchor="middle" transform="rotate(-45 843.33 646)">2021</text>
+<text class="xcount" x="843.33" y="676" text-anchor="middle">n=564</text>
+<line class="grid" x1="938.00" y1="56" x2="938.00" y2="624"/>
+<text class="label" x="938.00" y="646" text-anchor="middle" transform="rotate(-45 938.00 646)">2022</text>
+<text class="xcount" x="938.00" y="676" text-anchor="middle">n=641</text>
+<line class="grid" x1="1032.67" y1="56" x2="1032.67" y2="624"/>
+<text class="label" x="1032.67" y="646" text-anchor="middle" transform="rotate(-45 1032.67 646)">2023</text>
+<text class="xcount" x="1032.67" y="676" text-anchor="middle">n=667</text>
+<line class="grid" x1="1127.33" y1="56" x2="1127.33" y2="624"/>
+<text class="label" x="1127.33" y="646" text-anchor="middle" transform="rotate(-45 1127.33 646)">2024</text>
+<text class="xcount" x="1127.33" y="676" text-anchor="middle">n=783</text>
+<line class="grid" x1="1222.00" y1="56" x2="1222.00" y2="624"/>
+<text class="label" x="1222.00" y="646" text-anchor="middle" transform="rotate(-45 1222.00 646)">2025</text>
+<text class="xcount" x="1222.00" y="676" text-anchor="middle">n=232</text>
+<line class="axis" x1="86" y1="56" x2="86" y2="624"/>
+<line class="axis" x1="1222" y1="56" x2="1222" y2="624"/>
+<line class="axis" x1="86" y1="624" x2="1222" y2="624"/>
+<path class="series-line" d="M 180.67 613.08 L 275.33 591.23 L 370.00 602.15 L 464.67 591.23 L 559.33 591.23 L 654.00 492.92 L 748.67 547.54 L 843.33 613.08 L 938.00 613.08 L 1032.67 613.08 L 1127.33 569.38 L 1222.00 569.38" stroke="#2563eb"><title>20k</title></path>
+<line class="iqr-whisker" x1="180.67" y1="613.08" x2="180.67" y2="558.46" stroke="#2563eb"><title>20k, 2014-01-28 to 2015-01-28, 25th=≤20k, 75th=17k</title></line>
+<line class="iqr-cap" x1="175.67" y1="613.08" x2="185.67" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-cap" x1="175.67" y1="558.46" x2="185.67" y2="558.46" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="275.33" y1="602.15" x2="275.33" y2="558.46" stroke="#2563eb"><title>20k, 2015-01-28 to 2016-01-28, 25th=19k, 75th=17k</title></line>
+<line class="iqr-cap" x1="270.33" y1="602.15" x2="280.33" y2="602.15" stroke="#2563eb"/>
+<line class="iqr-cap" x1="270.33" y1="558.46" x2="280.33" y2="558.46" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="370.00" y1="607.62" x2="370.00" y2="596.69" stroke="#2563eb"><title>20k, 2016-01-28 to 2017-01-28, 25th=≤20k, 75th=19k</title></line>
+<line class="iqr-cap" x1="365.00" y1="607.62" x2="375.00" y2="607.62" stroke="#2563eb"/>
+<line class="iqr-cap" x1="365.00" y1="596.69" x2="375.00" y2="596.69" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="464.67" y1="613.08" x2="464.67" y2="558.46" stroke="#2563eb"><title>20k, 2017-01-28 to 2018-01-28, 25th=≤20k, 75th=17k</title></line>
+<line class="iqr-cap" x1="459.67" y1="613.08" x2="469.67" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-cap" x1="459.67" y1="558.46" x2="469.67" y2="558.46" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="559.33" y1="613.08" x2="559.33" y2="345.46" stroke="#2563eb"><title>20k, 2018-01-28 to 2019-01-28, 25th=≤20k, 75th=8k</title></line>
+<line class="iqr-cap" x1="554.33" y1="613.08" x2="564.33" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-cap" x1="554.33" y1="345.46" x2="564.33" y2="345.46" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="654.00" y1="596.69" x2="654.00" y2="411.00" stroke="#2563eb"><title>20k, 2019-01-28 to 2020-01-28, 25th=19k, 75th=11k</title></line>
+<line class="iqr-cap" x1="649.00" y1="596.69" x2="659.00" y2="596.69" stroke="#2563eb"/>
+<line class="iqr-cap" x1="649.00" y1="411.00" x2="659.00" y2="411.00" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="748.67" y1="596.69" x2="748.67" y2="503.85" stroke="#2563eb"><title>20k, 2020-01-28 to 2021-01-28, 25th=19k, 75th=15k</title></line>
+<line class="iqr-cap" x1="743.67" y1="596.69" x2="753.67" y2="596.69" stroke="#2563eb"/>
+<line class="iqr-cap" x1="743.67" y1="503.85" x2="753.67" y2="503.85" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="843.33" y1="613.08" x2="843.33" y2="613.08" stroke="#2563eb"><title>20k, 2021-01-28 to 2022-01-28, 25th=≤20k, 75th=≤20k</title></line>
+<line class="iqr-cap" x1="838.33" y1="613.08" x2="848.33" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-cap" x1="838.33" y1="613.08" x2="848.33" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="938.00" y1="613.08" x2="938.00" y2="613.08" stroke="#2563eb"><title>20k, 2022-01-28 to 2023-01-28, 25th=≤20k, 75th=≤20k</title></line>
+<line class="iqr-cap" x1="933.00" y1="613.08" x2="943.00" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-cap" x1="933.00" y1="613.08" x2="943.00" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="1032.67" y1="613.08" x2="1032.67" y2="596.69" stroke="#2563eb"><title>20k, 2023-01-28 to 2024-01-28, 25th=≤20k, 75th=19k</title></line>
+<line class="iqr-cap" x1="1027.67" y1="613.08" x2="1037.67" y2="613.08" stroke="#2563eb"/>
+<line class="iqr-cap" x1="1027.67" y1="596.69" x2="1037.67" y2="596.69" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="1127.33" y1="596.69" x2="1127.33" y2="503.85" stroke="#2563eb"><title>20k, 2024-01-28 to 2025-01-28, 25th=19k, 75th=15k</title></line>
+<line class="iqr-cap" x1="1122.33" y1="596.69" x2="1132.33" y2="596.69" stroke="#2563eb"/>
+<line class="iqr-cap" x1="1122.33" y1="503.85" x2="1132.33" y2="503.85" stroke="#2563eb"/>
+<line class="iqr-whisker" x1="1222.00" y1="602.15" x2="1222.00" y2="547.54" stroke="#2563eb"><title>20k, 2025-01-28 to 2026-01-28, 25th=19k, 75th=17k</title></line>
+<line class="iqr-cap" x1="1217.00" y1="602.15" x2="1227.00" y2="602.15" stroke="#2563eb"/>
+<line class="iqr-cap" x1="1217.00" y1="547.54" x2="1227.00" y2="547.54" stroke="#2563eb"/>
+<circle class="series-point" cx="180.67" cy="613.08" r="4" fill="#2563eb"><title>20k, 2014-01-28 to 2015-01-28, n=15</title></circle>
+<circle class="series-point" cx="275.33" cy="591.23" r="4" fill="#2563eb"><title>20k, 2015-01-28 to 2016-01-28, n=3</title></circle>
+<circle class="series-point" cx="370.00" cy="602.15" r="4" fill="#2563eb"><title>20k, 2016-01-28 to 2017-01-28, n=2</title></circle>
+<circle class="series-point" cx="464.67" cy="591.23" r="4" fill="#2563eb"><title>20k, 2017-01-28 to 2018-01-28, n=27</title></circle>
+<circle class="series-point" cx="559.33" cy="591.23" r="4" fill="#2563eb"><title>20k, 2018-01-28 to 2019-01-28, n=32</title></circle>
+<circle class="series-point" cx="654.00" cy="492.92" r="4" fill="#2563eb"><title>20k, 2019-01-28 to 2020-01-28, n=12</title></circle>
+<circle class="series-point" cx="748.67" cy="547.54" r="4" fill="#2563eb"><title>20k, 2020-01-28 to 2021-01-28, n=36</title></circle>
+<circle class="series-point" cx="843.33" cy="613.08" r="4" fill="#2563eb"><title>20k, 2021-01-28 to 2022-01-28, n=6</title></circle>
+<circle class="series-point" cx="938.00" cy="613.08" r="4" fill="#2563eb"><title>20k, 2022-01-28 to 2023-01-28, n=2</title></circle>
+<circle class="series-point" cx="1032.67" cy="613.08" r="4" fill="#2563eb"><title>20k, 2023-01-28 to 2024-01-28, n=14</title></circle>
+<circle class="series-point" cx="1127.33" cy="569.38" r="4" fill="#2563eb"><title>20k, 2024-01-28 to 2025-01-28, n=28</title></circle>
+<circle class="series-point" cx="1222.00" cy="569.38" r="4" fill="#2563eb"><title>20k, 2025-01-28 to 2026-01-28, n=7</title></circle>
+<path class="series-line" d="M 180.67 416.46 L 275.33 438.31 L 370.00 460.15 L 464.67 394.62 L 559.33 394.62 L 654.00 394.62 L 748.67 416.46 L 843.33 580.31 L 938.00 580.31 L 1032.67 569.38 L 1127.33 482.00 L 1222.00 416.46" stroke="#16afad"><title>15k</title></path>
+<line class="iqr-whisker" x1="180.67" y1="438.31" x2="180.67" y2="394.62" stroke="#16afad"><title>15k, 2014-01-28 to 2015-01-28, 25th=12k, 75th=10k</title></line>
+<line class="iqr-cap" x1="175.67" y1="438.31" x2="185.67" y2="438.31" stroke="#16afad"/>
+<line class="iqr-cap" x1="175.67" y1="394.62" x2="185.67" y2="394.62" stroke="#16afad"/>
+<line class="iqr-whisker" x1="275.33" y1="460.15" x2="275.33" y2="372.77" stroke="#16afad"><title>15k, 2015-01-28 to 2016-01-28, 25th=13k, 75th=9k</title></line>
+<line class="iqr-cap" x1="270.33" y1="460.15" x2="280.33" y2="460.15" stroke="#16afad"/>
+<line class="iqr-cap" x1="270.33" y1="372.77" x2="280.33" y2="372.77" stroke="#16afad"/>
+<line class="iqr-whisker" x1="370.00" y1="465.62" x2="370.00" y2="416.46" stroke="#16afad"><title>15k, 2016-01-28 to 2017-01-28, 25th=13k, 75th=11k</title></line>
+<line class="iqr-cap" x1="365.00" y1="465.62" x2="375.00" y2="465.62" stroke="#16afad"/>
+<line class="iqr-cap" x1="365.00" y1="416.46" x2="375.00" y2="416.46" stroke="#16afad"/>
+<line class="iqr-whisker" x1="464.67" y1="460.15" x2="464.67" y2="350.92" stroke="#16afad"><title>15k, 2017-01-28 to 2018-01-28, 25th=13k, 75th=8k</title></line>
+<line class="iqr-cap" x1="459.67" y1="460.15" x2="469.67" y2="460.15" stroke="#16afad"/>
+<line class="iqr-cap" x1="459.67" y1="350.92" x2="469.67" y2="350.92" stroke="#16afad"/>
+<line class="iqr-whisker" x1="559.33" y1="460.15" x2="559.33" y2="329.08" stroke="#16afad"><title>15k, 2018-01-28 to 2019-01-28, 25th=13k, 75th=7k</title></line>
+<line class="iqr-cap" x1="554.33" y1="460.15" x2="564.33" y2="460.15" stroke="#16afad"/>
+<line class="iqr-cap" x1="554.33" y1="329.08" x2="564.33" y2="329.08" stroke="#16afad"/>
+<line class="iqr-whisker" x1="654.00" y1="460.15" x2="654.00" y2="350.92" stroke="#16afad"><title>15k, 2019-01-28 to 2020-01-28, 25th=13k, 75th=8k</title></line>
+<line class="iqr-cap" x1="649.00" y1="460.15" x2="659.00" y2="460.15" stroke="#16afad"/>
+<line class="iqr-cap" x1="649.00" y1="350.92" x2="659.00" y2="350.92" stroke="#16afad"/>
+<line class="iqr-whisker" x1="748.67" y1="460.15" x2="748.67" y2="394.62" stroke="#16afad"><title>15k, 2020-01-28 to 2021-01-28, 25th=13k, 75th=10k</title></line>
+<line class="iqr-cap" x1="743.67" y1="460.15" x2="753.67" y2="460.15" stroke="#16afad"/>
+<line class="iqr-cap" x1="743.67" y1="394.62" x2="753.67" y2="394.62" stroke="#16afad"/>
+<line class="iqr-whisker" x1="843.33" y1="591.23" x2="843.33" y2="547.54" stroke="#16afad"><title>15k, 2021-01-28 to 2022-01-28, 25th=19k, 75th=17k</title></line>
+<line class="iqr-cap" x1="838.33" y1="591.23" x2="848.33" y2="591.23" stroke="#16afad"/>
+<line class="iqr-cap" x1="838.33" y1="547.54" x2="848.33" y2="547.54" stroke="#16afad"/>
+<line class="iqr-whisker" x1="938.00" y1="613.08" x2="938.00" y2="503.85" stroke="#16afad"><title>15k, 2022-01-28 to 2023-01-28, 25th=≤20k, 75th=15k</title></line>
+<line class="iqr-cap" x1="933.00" y1="613.08" x2="943.00" y2="613.08" stroke="#16afad"/>
+<line class="iqr-cap" x1="933.00" y1="503.85" x2="943.00" y2="503.85" stroke="#16afad"/>
+<line class="iqr-whisker" x1="1032.67" y1="591.23" x2="1032.67" y2="503.85" stroke="#16afad"><title>15k, 2023-01-28 to 2024-01-28, 25th=19k, 75th=15k</title></line>
+<line class="iqr-cap" x1="1027.67" y1="591.23" x2="1037.67" y2="591.23" stroke="#16afad"/>
+<line class="iqr-cap" x1="1027.67" y1="503.85" x2="1037.67" y2="503.85" stroke="#16afad"/>
+<line class="iqr-whisker" x1="1127.33" y1="547.54" x2="1127.33" y2="438.31" stroke="#16afad"><title>15k, 2024-01-28 to 2025-01-28, 25th=17k, 75th=12k</title></line>
+<line class="iqr-cap" x1="1122.33" y1="547.54" x2="1132.33" y2="547.54" stroke="#16afad"/>
+<line class="iqr-cap" x1="1122.33" y1="438.31" x2="1132.33" y2="438.31" stroke="#16afad"/>
+<line class="iqr-whisker" x1="1222.00" y1="460.15" x2="1222.00" y2="394.62" stroke="#16afad"><title>15k, 2025-01-28 to 2026-01-28, 25th=13k, 75th=10k</title></line>
+<line class="iqr-cap" x1="1217.00" y1="460.15" x2="1227.00" y2="460.15" stroke="#16afad"/>
+<line class="iqr-cap" x1="1217.00" y1="394.62" x2="1227.00" y2="394.62" stroke="#16afad"/>
+<circle class="series-point" cx="180.67" cy="416.46" r="4" fill="#16afad"><title>15k, 2014-01-28 to 2015-01-28, n=25</title></circle>
+<circle class="series-point" cx="275.33" cy="438.31" r="4" fill="#16afad"><title>15k, 2015-01-28 to 2016-01-28, n=21</title></circle>
+<circle class="series-point" cx="370.00" cy="460.15" r="4" fill="#16afad"><title>15k, 2016-01-28 to 2017-01-28, n=32</title></circle>
+<circle class="series-point" cx="464.67" cy="394.62" r="4" fill="#16afad"><title>15k, 2017-01-28 to 2018-01-28, n=47</title></circle>
+<circle class="series-point" cx="559.33" cy="394.62" r="4" fill="#16afad"><title>15k, 2018-01-28 to 2019-01-28, n=103</title></circle>
+<circle class="series-point" cx="654.00" cy="394.62" r="4" fill="#16afad"><title>15k, 2019-01-28 to 2020-01-28, n=81</title></circle>
+<circle class="series-point" cx="748.67" cy="416.46" r="4" fill="#16afad"><title>15k, 2020-01-28 to 2021-01-28, n=84</title></circle>
+<circle class="series-point" cx="843.33" cy="580.31" r="4" fill="#16afad"><title>15k, 2021-01-28 to 2022-01-28, n=28</title></circle>
+<circle class="series-point" cx="938.00" cy="580.31" r="4" fill="#16afad"><title>15k, 2022-01-28 to 2023-01-28, n=46</title></circle>
+<circle class="series-point" cx="1032.67" cy="569.38" r="4" fill="#16afad"><title>15k, 2023-01-28 to 2024-01-28, n=49</title></circle>
+<circle class="series-point" cx="1127.33" cy="482.00" r="4" fill="#16afad"><title>15k, 2024-01-28 to 2025-01-28, n=93</title></circle>
+<circle class="series-point" cx="1222.00" cy="416.46" r="4" fill="#16afad"><title>15k, 2025-01-28 to 2026-01-28, n=34</title></circle>
+<path class="series-line" d="M 86.00 285.38 L 180.67 285.38 L 275.33 307.23 L 370.00 307.23 L 464.67 307.23 L 559.33 241.69 L 654.00 263.54 L 748.67 307.23 L 843.33 416.46 L 938.00 394.62 L 1032.67 394.62 L 1127.33 350.92 L 1222.00 329.08" stroke="#21c464"><title>10k</title></path>
+<line class="iqr-whisker" x1="86.00" y1="285.38" x2="86.00" y2="285.38" stroke="#21c464"><title>10k, 2013-01-28 to 2014-01-28, 25th=5k, 75th=5k</title></line>
+<line class="iqr-cap" x1="81.00" y1="285.38" x2="91.00" y2="285.38" stroke="#21c464"/>
+<line class="iqr-cap" x1="81.00" y1="285.38" x2="91.00" y2="285.38" stroke="#21c464"/>
+<line class="iqr-whisker" x1="180.67" y1="307.23" x2="180.67" y2="263.54" stroke="#21c464"><title>10k, 2014-01-28 to 2015-01-28, 25th=6k, 75th=4k</title></line>
+<line class="iqr-cap" x1="175.67" y1="307.23" x2="185.67" y2="307.23" stroke="#21c464"/>
+<line class="iqr-cap" x1="175.67" y1="263.54" x2="185.67" y2="263.54" stroke="#21c464"/>
+<line class="iqr-whisker" x1="275.33" y1="329.08" x2="275.33" y2="285.38" stroke="#21c464"><title>10k, 2015-01-28 to 2016-01-28, 25th=7k, 75th=5k</title></line>
+<line class="iqr-cap" x1="270.33" y1="329.08" x2="280.33" y2="329.08" stroke="#21c464"/>
+<line class="iqr-cap" x1="270.33" y1="285.38" x2="280.33" y2="285.38" stroke="#21c464"/>
+<line class="iqr-whisker" x1="370.00" y1="329.08" x2="370.00" y2="285.38" stroke="#21c464"><title>10k, 2016-01-28 to 2017-01-28, 25th=7k, 75th=5k</title></line>
+<line class="iqr-cap" x1="365.00" y1="329.08" x2="375.00" y2="329.08" stroke="#21c464"/>
+<line class="iqr-cap" x1="365.00" y1="285.38" x2="375.00" y2="285.38" stroke="#21c464"/>
+<line class="iqr-whisker" x1="464.67" y1="329.08" x2="464.67" y2="285.38" stroke="#21c464"><title>10k, 2017-01-28 to 2018-01-28, 25th=7k, 75th=5k</title></line>
+<line class="iqr-cap" x1="459.67" y1="329.08" x2="469.67" y2="329.08" stroke="#21c464"/>
+<line class="iqr-cap" x1="459.67" y1="285.38" x2="469.67" y2="285.38" stroke="#21c464"/>
+<line class="iqr-whisker" x1="559.33" y1="263.54" x2="559.33" y2="219.85" stroke="#21c464"><title>10k, 2018-01-28 to 2019-01-28, 25th=4k, 75th=2k</title></line>
+<line class="iqr-cap" x1="554.33" y1="263.54" x2="564.33" y2="263.54" stroke="#21c464"/>
+<line class="iqr-cap" x1="554.33" y1="219.85" x2="564.33" y2="219.85" stroke="#21c464"/>
+<line class="iqr-whisker" x1="654.00" y1="329.08" x2="654.00" y2="241.69" stroke="#21c464"><title>10k, 2019-01-28 to 2020-01-28, 25th=7k, 75th=3k</title></line>
+<line class="iqr-cap" x1="649.00" y1="329.08" x2="659.00" y2="329.08" stroke="#21c464"/>
+<line class="iqr-cap" x1="649.00" y1="241.69" x2="659.00" y2="241.69" stroke="#21c464"/>
+<line class="iqr-whisker" x1="748.67" y1="350.92" x2="748.67" y2="285.38" stroke="#21c464"><title>10k, 2020-01-28 to 2021-01-28, 25th=8k, 75th=5k</title></line>
+<line class="iqr-cap" x1="743.67" y1="350.92" x2="753.67" y2="350.92" stroke="#21c464"/>
+<line class="iqr-cap" x1="743.67" y1="285.38" x2="753.67" y2="285.38" stroke="#21c464"/>
+<line class="iqr-whisker" x1="843.33" y1="460.15" x2="843.33" y2="372.77" stroke="#21c464"><title>10k, 2021-01-28 to 2022-01-28, 25th=13k, 75th=9k</title></line>
+<line class="iqr-cap" x1="838.33" y1="460.15" x2="848.33" y2="460.15" stroke="#21c464"/>
+<line class="iqr-cap" x1="838.33" y1="372.77" x2="848.33" y2="372.77" stroke="#21c464"/>
+<line class="iqr-whisker" x1="938.00" y1="460.15" x2="938.00" y2="350.92" stroke="#21c464"><title>10k, 2022-01-28 to 2023-01-28, 25th=13k, 75th=8k</title></line>
+<line class="iqr-cap" x1="933.00" y1="460.15" x2="943.00" y2="460.15" stroke="#21c464"/>
+<line class="iqr-cap" x1="933.00" y1="350.92" x2="943.00" y2="350.92" stroke="#21c464"/>
+<line class="iqr-whisker" x1="1032.67" y1="460.15" x2="1032.67" y2="350.92" stroke="#21c464"><title>10k, 2023-01-28 to 2024-01-28, 25th=13k, 75th=8k</title></line>
+<line class="iqr-cap" x1="1027.67" y1="460.15" x2="1037.67" y2="460.15" stroke="#21c464"/>
+<line class="iqr-cap" x1="1027.67" y1="350.92" x2="1037.67" y2="350.92" stroke="#21c464"/>
+<line class="iqr-whisker" x1="1127.33" y1="416.46" x2="1127.33" y2="329.08" stroke="#21c464"><title>10k, 2024-01-28 to 2025-01-28, 25th=11k, 75th=7k</title></line>
+<line class="iqr-cap" x1="1122.33" y1="416.46" x2="1132.33" y2="416.46" stroke="#21c464"/>
+<line class="iqr-cap" x1="1122.33" y1="329.08" x2="1132.33" y2="329.08" stroke="#21c464"/>
+<line class="iqr-whisker" x1="1222.00" y1="350.92" x2="1222.00" y2="290.85" stroke="#21c464"><title>10k, 2025-01-28 to 2026-01-28, 25th=8k, 75th=5k</title></line>
+<line class="iqr-cap" x1="1217.00" y1="350.92" x2="1227.00" y2="350.92" stroke="#21c464"/>
+<line class="iqr-cap" x1="1217.00" y1="290.85" x2="1227.00" y2="290.85" stroke="#21c464"/>
+<circle class="series-point" cx="86.00" cy="285.38" r="4" fill="#21c464"><title>10k, 2013-01-28 to 2014-01-28, n=1</title></circle>
+<circle class="series-point" cx="180.67" cy="285.38" r="4" fill="#21c464"><title>10k, 2014-01-28 to 2015-01-28, n=18</title></circle>
+<circle class="series-point" cx="275.33" cy="307.23" r="4" fill="#21c464"><title>10k, 2015-01-28 to 2016-01-28, n=31</title></circle>
+<circle class="series-point" cx="370.00" cy="307.23" r="4" fill="#21c464"><title>10k, 2016-01-28 to 2017-01-28, n=44</title></circle>
+<circle class="series-point" cx="464.67" cy="307.23" r="4" fill="#21c464"><title>10k, 2017-01-28 to 2018-01-28, n=51</title></circle>
+<circle class="series-point" cx="559.33" cy="241.69" r="4" fill="#21c464"><title>10k, 2018-01-28 to 2019-01-28, n=88</title></circle>
+<circle class="series-point" cx="654.00" cy="263.54" r="4" fill="#21c464"><title>10k, 2019-01-28 to 2020-01-28, n=88</title></circle>
+<circle class="series-point" cx="748.67" cy="307.23" r="4" fill="#21c464"><title>10k, 2020-01-28 to 2021-01-28, n=150</title></circle>
+<circle class="series-point" cx="843.33" cy="416.46" r="4" fill="#21c464"><title>10k, 2021-01-28 to 2022-01-28, n=176</title></circle>
+<circle class="series-point" cx="938.00" cy="394.62" r="4" fill="#21c464"><title>10k, 2022-01-28 to 2023-01-28, n=187</title></circle>
+<circle class="series-point" cx="1032.67" cy="394.62" r="4" fill="#21c464"><title>10k, 2023-01-28 to 2024-01-28, n=195</title></circle>
+<circle class="series-point" cx="1127.33" cy="350.92" r="4" fill="#21c464"><title>10k, 2024-01-28 to 2025-01-28, n=247</title></circle>
+<circle class="series-point" cx="1222.00" cy="329.08" r="4" fill="#21c464"><title>10k, 2025-01-28 to 2026-01-28, n=58</title></circle>
+<path class="series-line" d="M 86.00 263.54 L 180.67 241.69 L 275.33 219.85 L 370.00 241.69 L 464.67 241.69 L 559.33 176.15 L 654.00 241.69 L 748.67 230.77 L 843.33 263.54 L 938.00 263.54 L 1032.67 263.54 L 1127.33 263.54 L 1222.00 241.69" stroke="#eca00e"><title>5k</title></path>
+<line class="iqr-whisker" x1="86.00" y1="263.54" x2="86.00" y2="263.54" stroke="#eca00e"><title>5k, 2013-01-28 to 2014-01-28, 25th=4k, 75th=4k</title></line>
+<line class="iqr-cap" x1="81.00" y1="263.54" x2="91.00" y2="263.54" stroke="#eca00e"/>
+<line class="iqr-cap" x1="81.00" y1="263.54" x2="91.00" y2="263.54" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="180.67" y1="241.69" x2="180.67" y2="219.85" stroke="#eca00e"><title>5k, 2014-01-28 to 2015-01-28, 25th=3k, 75th=2k</title></line>
+<line class="iqr-cap" x1="175.67" y1="241.69" x2="185.67" y2="241.69" stroke="#eca00e"/>
+<line class="iqr-cap" x1="175.67" y1="219.85" x2="185.67" y2="219.85" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="275.33" y1="241.69" x2="275.33" y2="219.85" stroke="#eca00e"><title>5k, 2015-01-28 to 2016-01-28, 25th=3k, 75th=2k</title></line>
+<line class="iqr-cap" x1="270.33" y1="241.69" x2="280.33" y2="241.69" stroke="#eca00e"/>
+<line class="iqr-cap" x1="270.33" y1="219.85" x2="280.33" y2="219.85" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="370.00" y1="263.54" x2="370.00" y2="219.85" stroke="#eca00e"><title>5k, 2016-01-28 to 2017-01-28, 25th=4k, 75th=2k</title></line>
+<line class="iqr-cap" x1="365.00" y1="263.54" x2="375.00" y2="263.54" stroke="#eca00e"/>
+<line class="iqr-cap" x1="365.00" y1="219.85" x2="375.00" y2="219.85" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="464.67" y1="263.54" x2="464.67" y2="219.85" stroke="#eca00e"><title>5k, 2017-01-28 to 2018-01-28, 25th=4k, 75th=2k</title></line>
+<line class="iqr-cap" x1="459.67" y1="263.54" x2="469.67" y2="263.54" stroke="#eca00e"/>
+<line class="iqr-cap" x1="459.67" y1="219.85" x2="469.67" y2="219.85" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="559.33" y1="198.00" x2="559.33" y2="165.23" stroke="#eca00e"><title>5k, 2018-01-28 to 2019-01-28, 25th=1k, 75th=2d</title></line>
+<line class="iqr-cap" x1="554.33" y1="198.00" x2="564.33" y2="198.00" stroke="#eca00e"/>
+<line class="iqr-cap" x1="554.33" y1="165.23" x2="564.33" y2="165.23" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="654.00" y1="263.54" x2="654.00" y2="219.85" stroke="#eca00e"><title>5k, 2019-01-28 to 2020-01-28, 25th=4k, 75th=2k</title></line>
+<line class="iqr-cap" x1="649.00" y1="263.54" x2="659.00" y2="263.54" stroke="#eca00e"/>
+<line class="iqr-cap" x1="649.00" y1="219.85" x2="659.00" y2="219.85" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="748.67" y1="247.15" x2="748.67" y2="198.00" stroke="#eca00e"><title>5k, 2020-01-28 to 2021-01-28, 25th=3k, 75th=1k</title></line>
+<line class="iqr-cap" x1="743.67" y1="247.15" x2="753.67" y2="247.15" stroke="#eca00e"/>
+<line class="iqr-cap" x1="743.67" y1="198.00" x2="753.67" y2="198.00" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="843.33" y1="285.38" x2="843.33" y2="241.69" stroke="#eca00e"><title>5k, 2021-01-28 to 2022-01-28, 25th=5k, 75th=3k</title></line>
+<line class="iqr-cap" x1="838.33" y1="285.38" x2="848.33" y2="285.38" stroke="#eca00e"/>
+<line class="iqr-cap" x1="838.33" y1="241.69" x2="848.33" y2="241.69" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="938.00" y1="285.38" x2="938.00" y2="241.69" stroke="#eca00e"><title>5k, 2022-01-28 to 2023-01-28, 25th=5k, 75th=3k</title></line>
+<line class="iqr-cap" x1="933.00" y1="285.38" x2="943.00" y2="285.38" stroke="#eca00e"/>
+<line class="iqr-cap" x1="933.00" y1="241.69" x2="943.00" y2="241.69" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="1032.67" y1="285.38" x2="1032.67" y2="241.69" stroke="#eca00e"><title>5k, 2023-01-28 to 2024-01-28, 25th=5k, 75th=3k</title></line>
+<line class="iqr-cap" x1="1027.67" y1="285.38" x2="1037.67" y2="285.38" stroke="#eca00e"/>
+<line class="iqr-cap" x1="1027.67" y1="241.69" x2="1037.67" y2="241.69" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="1127.33" y1="285.38" x2="1127.33" y2="241.69" stroke="#eca00e"><title>5k, 2024-01-28 to 2025-01-28, 25th=5k, 75th=3k</title></line>
+<line class="iqr-cap" x1="1122.33" y1="285.38" x2="1132.33" y2="285.38" stroke="#eca00e"/>
+<line class="iqr-cap" x1="1122.33" y1="241.69" x2="1132.33" y2="241.69" stroke="#eca00e"/>
+<line class="iqr-whisker" x1="1222.00" y1="263.54" x2="1222.00" y2="219.85" stroke="#eca00e"><title>5k, 2025-01-28 to 2026-01-28, 25th=4k, 75th=2k</title></line>
+<line class="iqr-cap" x1="1217.00" y1="263.54" x2="1227.00" y2="263.54" stroke="#eca00e"/>
+<line class="iqr-cap" x1="1217.00" y1="219.85" x2="1227.00" y2="219.85" stroke="#eca00e"/>
+<circle class="series-point" cx="86.00" cy="263.54" r="4" fill="#eca00e"><title>5k, 2013-01-28 to 2014-01-28, n=1</title></circle>
+<circle class="series-point" cx="180.67" cy="241.69" r="4" fill="#eca00e"><title>5k, 2014-01-28 to 2015-01-28, n=21</title></circle>
+<circle class="series-point" cx="275.33" cy="219.85" r="4" fill="#eca00e"><title>5k, 2015-01-28 to 2016-01-28, n=41</title></circle>
+<circle class="series-point" cx="370.00" cy="241.69" r="4" fill="#eca00e"><title>5k, 2016-01-28 to 2017-01-28, n=96</title></circle>
+<circle class="series-point" cx="464.67" cy="241.69" r="4" fill="#eca00e"><title>5k, 2017-01-28 to 2018-01-28, n=44</title></circle>
+<circle class="series-point" cx="559.33" cy="176.15" r="4" fill="#eca00e"><title>5k, 2018-01-28 to 2019-01-28, n=11</title></circle>
+<circle class="series-point" cx="654.00" cy="241.69" r="4" fill="#eca00e"><title>5k, 2019-01-28 to 2020-01-28, n=61</title></circle>
+<circle class="series-point" cx="748.67" cy="230.77" r="4" fill="#eca00e"><title>5k, 2020-01-28 to 2021-01-28, n=156</title></circle>
+<circle class="series-point" cx="843.33" cy="263.54" r="4" fill="#eca00e"><title>5k, 2021-01-28 to 2022-01-28, n=261</title></circle>
+<circle class="series-point" cx="938.00" cy="263.54" r="4" fill="#eca00e"><title>5k, 2022-01-28 to 2023-01-28, n=277</title></circle>
+<circle class="series-point" cx="1032.67" cy="263.54" r="4" fill="#eca00e"><title>5k, 2023-01-28 to 2024-01-28, n=313</title></circle>
+<circle class="series-point" cx="1127.33" cy="263.54" r="4" fill="#eca00e"><title>5k, 2024-01-28 to 2025-01-28, n=329</title></circle>
+<circle class="series-point" cx="1222.00" cy="241.69" r="4" fill="#eca00e"><title>5k, 2025-01-28 to 2026-01-28, n=113</title></circle>
+<path class="series-line" d="M 180.67 208.92 L 275.33 165.23 L 370.00 176.15 L 464.67 176.15 L 559.33 165.23 L 654.00 176.15 L 748.67 176.15 L 843.33 176.15 L 938.00 198.00 L 1032.67 198.00 L 1127.33 176.15 L 1222.00 176.15" stroke="#dc2626"><title>1d</title></path>
+<line class="iqr-whisker" x1="180.67" y1="236.23" x2="180.67" y2="181.62" stroke="#dc2626"><title>1d, 2014-01-28 to 2015-01-28, 25th=3k, 75th=1d</title></line>
+<line class="iqr-cap" x1="175.67" y1="236.23" x2="185.67" y2="236.23" stroke="#dc2626"/>
+<line class="iqr-cap" x1="175.67" y1="181.62" x2="185.67" y2="181.62" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="275.33" y1="198.00" x2="275.33" y2="154.31" stroke="#dc2626"><title>1d, 2015-01-28 to 2016-01-28, 25th=1k, 75th=2d</title></line>
+<line class="iqr-cap" x1="270.33" y1="198.00" x2="280.33" y2="198.00" stroke="#dc2626"/>
+<line class="iqr-cap" x1="270.33" y1="154.31" x2="280.33" y2="154.31" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="370.00" y1="176.15" x2="370.00" y2="154.31" stroke="#dc2626"><title>1d, 2016-01-28 to 2017-01-28, 25th=1d, 75th=2d</title></line>
+<line class="iqr-cap" x1="365.00" y1="176.15" x2="375.00" y2="176.15" stroke="#dc2626"/>
+<line class="iqr-cap" x1="365.00" y1="154.31" x2="375.00" y2="154.31" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="464.67" y1="181.62" x2="464.67" y2="170.69" stroke="#dc2626"><title>1d, 2017-01-28 to 2018-01-28, 25th=1d, 75th=1d</title></line>
+<line class="iqr-cap" x1="459.67" y1="181.62" x2="469.67" y2="181.62" stroke="#dc2626"/>
+<line class="iqr-cap" x1="459.67" y1="170.69" x2="469.67" y2="170.69" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="559.33" y1="181.62" x2="559.33" y2="148.85" stroke="#dc2626"><title>1d, 2018-01-28 to 2019-01-28, 25th=1d, 75th=2d</title></line>
+<line class="iqr-cap" x1="554.33" y1="181.62" x2="564.33" y2="181.62" stroke="#dc2626"/>
+<line class="iqr-cap" x1="554.33" y1="148.85" x2="564.33" y2="148.85" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="654.00" y1="187.08" x2="654.00" y2="176.15" stroke="#dc2626"><title>1d, 2019-01-28 to 2020-01-28, 25th=1k, 75th=1d</title></line>
+<line class="iqr-cap" x1="649.00" y1="187.08" x2="659.00" y2="187.08" stroke="#dc2626"/>
+<line class="iqr-cap" x1="649.00" y1="176.15" x2="659.00" y2="176.15" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="748.67" y1="198.00" x2="748.67" y2="154.31" stroke="#dc2626"><title>1d, 2020-01-28 to 2021-01-28, 25th=1k, 75th=2d</title></line>
+<line class="iqr-cap" x1="743.67" y1="198.00" x2="753.67" y2="198.00" stroke="#dc2626"/>
+<line class="iqr-cap" x1="743.67" y1="154.31" x2="753.67" y2="154.31" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="843.33" y1="198.00" x2="843.33" y2="176.15" stroke="#dc2626"><title>1d, 2021-01-28 to 2022-01-28, 25th=1k, 75th=1d</title></line>
+<line class="iqr-cap" x1="838.33" y1="198.00" x2="848.33" y2="198.00" stroke="#dc2626"/>
+<line class="iqr-cap" x1="838.33" y1="176.15" x2="848.33" y2="176.15" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="938.00" y1="219.85" x2="938.00" y2="176.15" stroke="#dc2626"><title>1d, 2022-01-28 to 2023-01-28, 25th=2k, 75th=1d</title></line>
+<line class="iqr-cap" x1="933.00" y1="219.85" x2="943.00" y2="219.85" stroke="#dc2626"/>
+<line class="iqr-cap" x1="933.00" y1="176.15" x2="943.00" y2="176.15" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="1032.67" y1="203.46" x2="1032.67" y2="154.31" stroke="#dc2626"><title>1d, 2023-01-28 to 2024-01-28, 25th=1k, 75th=2d</title></line>
+<line class="iqr-cap" x1="1027.67" y1="203.46" x2="1037.67" y2="203.46" stroke="#dc2626"/>
+<line class="iqr-cap" x1="1027.67" y1="154.31" x2="1037.67" y2="154.31" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="1127.33" y1="198.00" x2="1127.33" y2="154.31" stroke="#dc2626"><title>1d, 2024-01-28 to 2025-01-28, 25th=1k, 75th=2d</title></line>
+<line class="iqr-cap" x1="1122.33" y1="198.00" x2="1132.33" y2="198.00" stroke="#dc2626"/>
+<line class="iqr-cap" x1="1122.33" y1="154.31" x2="1132.33" y2="154.31" stroke="#dc2626"/>
+<line class="iqr-whisker" x1="1222.00" y1="181.62" x2="1222.00" y2="154.31" stroke="#dc2626"><title>1d, 2025-01-28 to 2026-01-28, 25th=1d, 75th=2d</title></line>
+<line class="iqr-cap" x1="1217.00" y1="181.62" x2="1227.00" y2="181.62" stroke="#dc2626"/>
+<line class="iqr-cap" x1="1217.00" y1="154.31" x2="1227.00" y2="154.31" stroke="#dc2626"/>
+<circle class="series-point" cx="180.67" cy="208.92" r="4" fill="#dc2626"><title>1d, 2014-01-28 to 2015-01-28, n=6</title></circle>
+<circle class="series-point" cx="275.33" cy="165.23" r="4" fill="#dc2626"><title>1d, 2015-01-28 to 2016-01-28, n=4</title></circle>
+<circle class="series-point" cx="370.00" cy="176.15" r="4" fill="#dc2626"><title>1d, 2016-01-28 to 2017-01-28, n=21</title></circle>
+<circle class="series-point" cx="464.67" cy="176.15" r="4" fill="#dc2626"><title>1d, 2017-01-28 to 2018-01-28, n=12</title></circle>
+<circle class="series-point" cx="559.33" cy="165.23" r="4" fill="#dc2626"><title>1d, 2018-01-28 to 2019-01-28, n=2</title></circle>
+<circle class="series-point" cx="654.00" cy="176.15" r="4" fill="#dc2626"><title>1d, 2019-01-28 to 2020-01-28, n=19</title></circle>
+<circle class="series-point" cx="748.67" cy="176.15" r="4" fill="#dc2626"><title>1d, 2020-01-28 to 2021-01-28, n=39</title></circle>
+<circle class="series-point" cx="843.33" cy="176.15" r="4" fill="#dc2626"><title>1d, 2021-01-28 to 2022-01-28, n=93</title></circle>
+<circle class="series-point" cx="938.00" cy="198.00" r="4" fill="#dc2626"><title>1d, 2022-01-28 to 2023-01-28, n=129</title></circle>
+<circle class="series-point" cx="1032.67" cy="198.00" r="4" fill="#dc2626"><title>1d, 2023-01-28 to 2024-01-28, n=96</title></circle>
+<circle class="series-point" cx="1127.33" cy="176.15" r="4" fill="#dc2626"><title>1d, 2024-01-28 to 2025-01-28, n=86</title></circle>
+<circle class="series-point" cx="1222.00" cy="176.15" r="4" fill="#dc2626"><title>1d, 2025-01-28 to 2026-01-28, n=20</title></circle>
+<text class="legend" x="1280" y="48" font-weight="700">OGS rank IQR</text>
+<line x1="1280" y1="66" x2="1308" y2="66" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<text class="legend" x="1316" y="70">20k</text>
+<line x1="1280" y1="88" x2="1308" y2="88" stroke="#16afad" stroke-width="3" stroke-linecap="round"/>
+<text class="legend" x="1316" y="92">15k</text>
+<line x1="1280" y1="110" x2="1308" y2="110" stroke="#21c464" stroke-width="3" stroke-linecap="round"/>
+<text class="legend" x="1316" y="114">10k</text>
+<line x1="1280" y1="132" x2="1308" y2="132" stroke="#eca00e" stroke-width="3" stroke-linecap="round"/>
+<text class="legend" x="1316" y="136">5k</text>
+<line x1="1280" y1="154" x2="1308" y2="154" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+<text class="legend" x="1316" y="158">1d</text>
+<text class="label" x="22" y="340.00" text-anchor="middle" transform="rotate(-90 22 340.00)">Median predicted KGS rank</text>
+<text class="label" x="654.00" y="706" text-anchor="middle">Year bucket start</text>
+</svg>
