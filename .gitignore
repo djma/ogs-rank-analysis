@@ -13,6 +13,7 @@ data/sample-100k-medium-ranked-19x19-human-150moves-sgfs/
 **/.rank_mle_cache/
 
 # Local and incomplete analysis outputs.
+data/
 results/
 
 # Local packaging outputs.

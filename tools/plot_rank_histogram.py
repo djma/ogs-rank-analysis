@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plot estimated rank distributions by OGS rank bucket as an SVG chart."""
+"""Plot estimated KGS rank distributions by OGS rank bucket as an SVG chart."""
 
 from __future__ import annotations
 
@@ -23,13 +23,17 @@ class DateFilters:
     begin: datetime | None = None
     end: datetime | None = None
 
-    def describe(self) -> str:
-        parts = []
-        if self.begin:
-            parts.append(f"from {format_filter_date(self.begin)}")
-        if self.end:
-            parts.append(f"through {format_filter_date(self.end)}")
-        return ", ".join(parts)
+
+@dataclass(frozen=True)
+class Sample:
+    buckets: dict[int, list[int]]
+    start: date | datetime | None = None
+    end: date | datetime | None = None
+
+    def describe_dates(self) -> str:
+        if self.start is None or self.end is None:
+            return ""
+        return f"{format_sample_date(self.start)} to {format_sample_date(self.end)}"
 
 
 def rank_to_strength(rank: str) -> int | None:
@@ -53,6 +57,23 @@ def strength_to_rank(strength: int) -> str:
     if strength <= 30:
         return f"{31 - strength}k"
     return f"{strength - 30}d"
+
+
+KGS_PREDICTED_MIN_STRENGTH = 11
+KGS_PREDICTED_MAX_STRENGTH = 36
+
+
+def predicted_strength(strength: int) -> int:
+    return min(KGS_PREDICTED_MAX_STRENGTH, max(KGS_PREDICTED_MIN_STRENGTH, strength))
+
+
+def predicted_rank_label(strength: int | float) -> str:
+    rounded = round(strength)
+    if rounded <= KGS_PREDICTED_MIN_STRENGTH:
+        return "≤20k"
+    if rounded >= KGS_PREDICTED_MAX_STRENGTH:
+        return "≥6d"
+    return strength_to_rank(rounded)
 
 
 def median(values: list[int]) -> float:
@@ -107,30 +128,54 @@ def date_in_range(value: date | datetime | None, filters: DateFilters) -> bool:
     return True
 
 
+def date_sort_key(value: date | datetime) -> datetime:
+    if isinstance(value, datetime):
+        return value
+    return datetime(value.year, value.month, value.day)
+
+
+def format_sample_date(value: date | datetime) -> str:
+    if isinstance(value, datetime):
+        return format_filter_date(value)
+    return value.strftime("%Y-%m-%d")
+
+
 def format_filter_date(value: datetime) -> str:
-    if value == ADJUST2021:
-        return "adjust2021 (2021-01-28 09:30 SGT)"
     if value.time() == datetime.min.time():
         return value.strftime("%Y-%m-%d")
     return value.strftime("%Y-%m-%d %H:%M")
 
 
-def collect_points(input_path: Path, filters: DateFilters) -> dict[int, list[int]]:
+def collect_points(input_path: Path, filters: DateFilters) -> Sample:
     buckets: dict[int, list[int]] = defaultdict(list)
+    sample_start: date | datetime | None = None
+    sample_end: date | datetime | None = None
     with input_path.open(newline="") as handle:
         for row in csv.DictReader(handle):
-            if not date_in_range(parse_row_date(row.get("game_date", "")), filters):
+            row_date = parse_row_date(row.get("game_date", ""))
+            if not date_in_range(row_date, filters):
                 continue
             pairs = (
                 ("black_ogs_rank", "black_estimated_rank"),
                 ("white_ogs_rank", "white_estimated_rank"),
             )
+            row_added = False
             for ogs_column, estimate_column in pairs:
                 ogs_strength = rank_to_strength(row.get(ogs_column, ""))
                 estimate_strength = rank_to_strength(row.get(estimate_column, ""))
                 if ogs_strength is not None and estimate_strength is not None:
-                    buckets[ogs_strength].append(estimate_strength)
-    return dict(sorted(buckets.items()))
+                    buckets[ogs_strength].append(predicted_strength(estimate_strength))
+                    row_added = True
+            if row_added and row_date is not None:
+                if sample_start is None or date_sort_key(row_date) < date_sort_key(sample_start):
+                    sample_start = row_date
+                if sample_end is None or date_sort_key(row_date) > date_sort_key(sample_end):
+                    sample_end = row_date
+    return Sample(
+        buckets=dict(sorted(buckets.items())),
+        start=sample_start,
+        end=sample_end,
+    )
 
 
 def collect_histogram(
@@ -165,16 +210,17 @@ def svg_escape(text: str) -> str:
 
 
 def render_svg(
-    buckets: dict[int, list[int]],
+    sample: Sample,
     output_path: Path,
     filters: DateFilters,
 ) -> None:
+    buckets = sample.buckets
     if not buckets:
         raise SystemExit("No rank pairs found in the CSV.")
 
     all_estimates = [value for values in buckets.values() for value in values]
-    min_y = max(1, min(min(all_estimates), min(buckets)))
-    max_y = max(max(all_estimates), max(buckets))
+    min_y = KGS_PREDICTED_MIN_STRENGTH
+    max_y = KGS_PREDICTED_MAX_STRENGTH
     min_x = min(buckets)
     max_x = max(buckets)
     counts, _max_count = collect_histogram(buckets)
@@ -199,9 +245,9 @@ def render_svg(
         return top + (max_y - strength) * cell_height + cell_height / 2
 
     subtitle = "Bars are normalized within each OGS rank; orange marks the median."
-    filter_description = filters.describe()
-    if filter_description:
-        subtitle += f" Sample filtered {filter_description}."
+    sample_dates = sample.describe_dates()
+    if sample_dates:
+        subtitle += f" Sample: {sample_dates}."
 
     lines = [
         '<svg xmlns="http://www.w3.org/2000/svg" '
@@ -230,11 +276,11 @@ def render_svg(
         lines.append(f'<line class="grid" x1="{left}" y1="{y:.2f}" x2="{width - right}" y2="{y:.2f}"/>')
         lines.append(
             f'<text class="label" x="{left - 10}" y="{y + 4:.2f}" text-anchor="end">'
-            f'{strength_to_rank(tick)}</text>'
+            f'{svg_escape(predicted_rank_label(tick))}</text>'
         )
         lines.append(
             f'<text class="label" x="{width - right + 10}" y="{y + 4:.2f}" text-anchor="start">'
-            f'{strength_to_rank(tick)}</text>'
+            f'{svg_escape(predicted_rank_label(tick))}</text>'
         )
 
     lines.append(f'<line class="axis" x1="{left}" y1="{top}" x2="{left}" y2="{height - bottom}"/>')
@@ -267,7 +313,7 @@ def render_svg(
             lines.append(
                 f'<rect class="bar" x="{x:.2f}" y="{y:.2f}" '
                 f'width="{bar_width:.2f}" height="{bar_height:.2f}" rx="1.5">'
-                f'<title>{strength_to_rank(ogs_strength)}: {count} estimated as {strength_to_rank(estimate_strength)}</title>'
+                f'<title>{strength_to_rank(ogs_strength)}: {count} estimated as {svg_escape(predicted_rank_label(estimate_strength))}</title>'
                 "</rect>"
             )
 
@@ -316,7 +362,7 @@ def render_svg(
     lines.append(
         f'<text class="label" x="{y_label_x}" y="{y_label_y:.2f}" '
         f'text-anchor="middle" transform="rotate(-90 {y_label_x} {y_label_y:.2f})">'
-        "Estimated rank</text>"
+        "Estimated KGS rank</text>"
     )
     lines.append(
         f'<text class="label" x="{left + plot_width / 2:.2f}" y="{height - 16}" text-anchor="middle">'
@@ -356,8 +402,8 @@ def main() -> int:
     filters = DateFilters(begin=args.begin_date, end=args.end_date)
     if filters.begin and filters.end and filters.begin > filters.end:
         raise SystemExit("--begin-date must be earlier than or equal to --end-date")
-    buckets = collect_points(args.input, filters)
-    render_svg(buckets, args.output, filters)
+    sample = collect_points(args.input, filters)
+    render_svg(sample, args.output, filters)
     print(f"Wrote {args.output}")
     return 0
 
